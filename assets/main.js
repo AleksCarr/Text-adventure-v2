@@ -1,0 +1,1 @@
+document.querySelector('#game').textContent = 'DOM Adventure Game.';
