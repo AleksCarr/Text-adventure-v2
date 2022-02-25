@@ -7,14 +7,41 @@
 
 	<title>Text-Adventure Game</title>
 
-	<link rel="stylesheet" href="assets/style.css" type="text/css" />
+	<link rel="stylesheet" href="assets/styles.css" type="text/css" />
 </head>
 
 <body>
     <main id="game">
         <script>
-            
-        </script>
+            const main = document.createElement('main');
+const first = document.querySelector('#game');
+const p = document.createElement('p');
+
+document.querySelector('#game').textContent = '';
+main.textContent ="Before we start this adventure please enter your name: "
+first.appendChild(main);
+</script>
+<form id = "frm1" name = "frm1"> <label for="name"></label>
+    <input type="text" id="fname" name="fname">
+    <button type="submit" onclick="newfun()">
+        Submit
+    </button></form>
+    <script>function newfun(){
+        var x = document.getElementById("frm1");
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        //document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text; 
+        document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +         
+        "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
+ "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." + 
+ " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?";
+    }
+
+
+     </script>
     </main>
     <script src="assets/main.js">
 	</script>
