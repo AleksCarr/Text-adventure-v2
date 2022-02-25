@@ -8,9 +8,10 @@
 	<title>Text-Adventure Game</title>
 
 	<link rel="stylesheet" href="assets/styles.css" type="text/css" />
+    <h1>Adventure Game</h1>
 </head>
-
 <body>
+    <div class ="form">
     <main id="game">
         <script>
             const main = document.createElement('main');
@@ -18,14 +19,15 @@ const first = document.querySelector('#game');
 const p = document.createElement('p');
 
 document.querySelector('#game').textContent = '';
-main.textContent ="Before we start this adventure please enter your name: "
+document.querySelector('main').innerHTML ="Before we start this adventure please enter your name: "
 first.appendChild(main);
 </script>
 <form id = "frm1" name = "frm1"> <label for="name"></label>
     <input type="text" id="fname" name="fname">
     <button type="submit" onclick="newfun()">
         Submit
-    </button></form>
+    </button>
+    <button>Notes</button></form>
     <script>function newfun(){
         var x = document.getElementById("frm1");
         var text = "";
@@ -33,15 +35,44 @@ first.appendChild(main);
         for (i = 0; i < x.length ;i++) {
             text += x.elements[i].value + "<br>";
         }
-        //document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text; 
         document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +         
         "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
  "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." + 
- " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?";
-    }
+ " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>";
+ let forms = document.createElement('INPUT');
+						forms.setAttribute("type", "text");
+						first.appendChild(forms)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        let form = document.createElement('INPUT');
+						form.setAttribute("type", "submit");
+						first.appendChild(form);
+                
+                        form.addEventListener('click', event => {
+                    if(forms.value =='right'){
+                        document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
+                        first.append(main);
+                        forms.setAttribute("type", "text");
+						first.appendChild(forms)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        let form = document.createElement('INPUT');
+						form.setAttribute("type", "submit");
+						first.appendChild(form);
+                        form.addEventListener('click', event => {
+                            if(forms.value =='stick'){
+                                document.querySelector("main").innerHTML = "You pick up the stick but decide it is pointless and drop it. You still have to choose so what else do you choose: "
+                            }
+                    })
+                        }
+                    })
+                }
 
 
      </script>
+    </div>
     </main>
     <script src="assets/main.js">
 	</script>

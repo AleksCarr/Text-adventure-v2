@@ -1,12 +1,12 @@
-*, *:after, *:before {
+/*, *:after, *:before {
     box-sizing: border-box;
   }
-  
+ */ 
   html {
     font-size: 1.2em;
   }
   
-  body {
+  /*body {
     align-items: center;
     background: #343434;
     color: #fefefe;
@@ -16,7 +16,41 @@
     line-height: 200%;
     min-height: 100vh;
   }
-  
-  main {
-    font-size: 2rem;
+  */
+  body {
+      background: #343434;
+      color: #fefefe;
+      align-items: center;
+      justify-content: center;
+      line-height: 200%;
+    min-height: 100vh;
+    font-family: Helvetica, Arial, sans-serif;
+    display: block;
   }
+  main{
+    font-size: 1em;
+}
+
+div{
+    width: 900px;
+  border: 1px solid;
+  min-height: 10vh;
+  line-height: 100%;
+    font-size: 1em;
+    margin-left: 15%;
+    margin-top:35%;
+}
+
+  h1{
+      display: block;
+  }
+
+input{
+    background-color: grey;
+    outline:none;
+    margin-left: 30%;
+    width: 20%; 
+}
+button{
+    margin-left: 10%;
+}
