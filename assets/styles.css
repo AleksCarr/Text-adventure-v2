@@ -18,7 +18,7 @@
   }
   */
   body {
-      background: #343434;
+      background: grey;
       color: #fefefe;
       align-items: center;
       justify-content: center;
@@ -39,6 +39,8 @@ div{
     font-size: 1em;
     margin-left: 15%;
     margin-top:35%;
+    border-bottom: none;
+    background-color: #515151;
 }
 
   h1{
@@ -46,11 +48,14 @@ div{
   }
 
 input{
-    background-color: grey;
+    background-color: #343434;;
     outline:none;
     margin-left: 30%;
     width: 20%; 
+    color: grey;
 }
 button{
     margin-left: 10%;
+    background-color: #343434;
+    color: grey;
 }
