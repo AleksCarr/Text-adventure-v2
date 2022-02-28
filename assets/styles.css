@@ -59,3 +59,18 @@ button{
     background-color: #343434;
     color: grey;
 }
+
+.notes{
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  min-height: 10vh;
+  line-height: 100%;
+    font-size: 1em;
+    margin-left: 85%;
+    margin-top: -10%;
+    border-bottom: none;
+    background-color: lightyellow;
+    color: black;
+    text-align: center;
+}
