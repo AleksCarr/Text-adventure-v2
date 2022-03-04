@@ -441,11 +441,54 @@ first.appendChild(main);
                 phone1button.setAttribute("type", "submit");
                 first.appendChild(phone1button);
                 phone1button.addEventListener('click', event => {
-            if(phone1form.value = "camera"){
-                document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kidsthey enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes."
-            } else if(phone1form.value == "contact"){
-                document.querySelector("main").innerHTML = "You search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes"
-            } 
+            if(phone1form.value == "camera"){
+                document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kidsthey enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
+            } else if(phone1form.value == "contacts"){
+                document.querySelector("main").innerHTML = "You search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+            
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
+                    } 
             })
 
         }
@@ -464,9 +507,55 @@ first.appendChild(main);
                 first.appendChild(phone2button);
                 phone2button.addEventListener('click', event => {
                     if(phone2form.value == "email"){
-                        document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search the contacts and open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. "
-                    } else if (phone2form.value == "contacts"){
-                        document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes."
+                        document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search the contacts and open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+                    
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
+                    
+            
+            } else if (phone2form.value == "contacts"){
+                        document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+                    
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
                     }
                 })
             
@@ -474,7 +563,7 @@ first.appendChild(main);
         }
         
         function contacts(){
-            document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. What do you search next?"
+            document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. What do you search next?"
             let phone3form = document.createElement('INPUT');
                 phone3form.setAttribute("type", "text");
                 first.appendChild(phone3form)
@@ -486,21 +575,153 @@ first.appendChild(main);
                 first.appendChild(phone3button);
                 phone3button.addEventListener('click', event => {
                     if(phone3form.value == "camera"){
-                        document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. "
+                        document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+                    
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
                     } else if (phone3form.value == "email"){
-                        document.querySelector("main").innerHTML = "You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes."
+                        document.querySelector("main").innerHTML = "You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. After searching through the phone you decide to look around the house. You find a fuse box with two missing fuses in it. You find the two missing fuses and put them in the fuse box. The house lights up but very poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first"
+                    
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    }
+                })
                     }
                 })
 
             }
-        })
+            function kitchen() {
+                document.querySelector("main").innerHTML = "You decide to go to the kitchen first and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes. What would you like to search next?"
+                first.append(main);
+                let room1form = document.createElement('INPUT');
+                room1form.setAttribute("type", "text");
+                first.appendChild(room1form)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let room1button = document.createElement('INPUT');
+                room1button.setAttribute("type", "submit");
+                first.appendChild(room1button);
+                room1button.addEventListener('click', event => {
+                    if(room1form.value == "attic"){
+                        document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs." +
+                        "You finally investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
+                "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
+                    } else if (room1.form == " living room"){
+                        document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
+                "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
+                    }
 
+
+            })
         }
-    }
-})
+        function livingroom(){
+            document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
+                "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "What would you like to search next?"
+                first.append(main);
+                let room1form = document.createElement('INPUT');
+                room1form.setAttribute("type", "text");
+                first.appendChild(room1form)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let room1button = document.createElement('INPUT');
+                room1button.setAttribute("type", "submit");
+                first.appendChild(room1button);
+                room1button.addEventListener('click', event => {
+                    if(room1form.value == "attic"){
+                        document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs." +
+                        "You finally search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
+                        } else if (room1form.value == "kitchen"){
+                            document.querySelector("main").innerHTML = "You decide to go to the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." +
+                            "You finally decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
+                        }
+                    })
+
+        function attic(){
+            document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs. What do you search next?" 
+            first.append(main);
+                let room1form = document.createElement('INPUT');
+                room1form.setAttribute("type", "text");
+                first.appendChild(room1form)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let room1button = document.createElement('INPUT');
+                room1button.setAttribute("type", "submit");
+                first.appendChild(room1button);
+                room1button.addEventListener('click', event => {
+                    if(room1form.value == "living room"){
+                        document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
+                "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "You finally decide to search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
+                    } else if(room1.value == "kitchen"){
+                        document.querySelector("main").innerHTML = "you search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." + 
+                "You finally investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
+                "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
+                    }
+        })
     }
 }
-    
+    })
+}
+}
+                        })
+                    }
+                }  
 
         
      
