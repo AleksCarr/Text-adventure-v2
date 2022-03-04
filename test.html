@@ -27,81 +27,58 @@ first.appendChild(main);
     <button type='submit' onclick="newfun()">
         Submit
     </button>
+    <button type="submit" onclick="right"></button>
     <button>Notes</button></form>
-    <script>function newfun(){
+    <script>
+       
+    function newfun(){
         var x = document.getElementById("frm1");
         var text = "";
         var i;
         for (i = 0; i < x.length ;i++) {
             text += x.elements[i].value + "<br>";
         }
-        car()
-    function car() {
+    
         document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +         
         "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
- "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." + 
- " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>";
- let forms = document.createElement('INPUT');
-                        forms.setAttribute("type", "text");
-                        first.appendChild(forms)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
-                        let form = document.createElement('INPUT');
-                        form.setAttribute("type", "submit");
-                        first.appendChild(form);
-                        form.addEventListener('click', event => {
-                            if(forms.value =='right'){
-                                right()
-                            } else if (forms.value =='left'){
-                                left()
-                            }
-                        })
-    }
-    function left() {
-        document.querySelector("main").innerHTML = "You decide to take the left and and soomehow go in a circle and end up back at your car. You decide to take another path which one this time straight or right?"
+ "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm."}
+ let button = document.createElement("BUTTON");
+					button.innerHTML = "start";
+					first.appendChild(button);
+                    button.addEventListener('click', right(), event => {
+                    })                                                         
+     function right() {
+document.querySelector("main").innerHTML = "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>";
+ 
+ let button = document.createElement("BUTTON");
+					button.innerHTML = "right";
+					first.appendChild(button);
+                    button.addEventListener('click', right(), event => {
+                    //right path done need to come back and fix a few things.
+                        document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
                         first.append(main);
                         let forms1 = document.createElement('INPUT');
                         forms1.setAttribute("type", "text");
-                        first.appendChild(forms1)
+						first.appendChild(forms1)
                         button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
                         let form2 = document.createElement('INPUT');
-                        form2.setAttribute("type", "submit");
-                        first.appendChild(form2);
-                        form2.addEventListener('click', event => {
-                            if (forms1.value == "right"){
-                                right()
-                            }
-                        })
-
-    }
-    function right(){
-        document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
-                        first.append(main);
-                        let forms1 = document.createElement('INPUT');
-                        forms1.setAttribute("type", "text");
-                        first.appendChild(forms1)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
-                        let form2 = document.createElement('INPUT');
-                        form2.setAttribute("type", "submit");
-                        first.appendChild(form2);
+						form2.setAttribute("type", "submit");
+						first.appendChild(form2);
                         form2.addEventListener('click', event => {
                             if(forms1.value =='stick'){
                                 document.querySelector("main").innerHTML = "You pick up the stick but decide it is pointless and drop it. You still have to choose so what else do you choose between a rock or keep looking: "
                                 first.append(main);
                                 let forms2 = document.createElement('INPUT');
                                 forms2.setAttribute("type", "text");
-                                first.appendChild(forms2)
+						        first.appendChild(forms2)
                                 button = document.createElement("BUTTON");
                                 button.innerHTML = "notes";
                                 first.appendChild(button);
                                 let form3 = document.createElement('INPUT');
-                                form3.setAttribute("type", "submit");
-                                first.appendChild(form3);
+						        form3.setAttribute("type", "submit");
+						        first.appendChild(form3);
                                 form3.addEventListener('click', event => {
                                     //Stick then rock
                                     if(forms2.value == 'rock'){
@@ -109,33 +86,33 @@ first.appendChild(main);
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
                                         forms3.setAttribute("type", "text");
-                                        first.appendChild(forms3)
+						                first.appendChild(forms3)
                                         button = document.createElement("BUTTON");
                                         button.innerHTML = "notes";
                                         first.appendChild(button);
                                         let form4 = document.createElement('INPUT');
-                                        form4.setAttribute("type", "submit");
-                                        first.appendChild(form4);
+						                form4.setAttribute("type", "submit");
+						                first.appendChild(form4);
                                         form4.addEventListener('click', event => {
                                             if(forms3.value == "key"){
-                                                jail()
+                                                document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter each number one by one in corresponding input fields "
                                          }else if(forms3.value == "force"){
                                                 document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                                 first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     } else if (forms4.value = "key"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     }
                                                 })    
                                             } 
@@ -146,76 +123,76 @@ first.appendChild(main);
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
                                         forms3.setAttribute("type", "text");
-                                        first.appendChild(forms3)
+						                first.appendChild(forms3)
                                         button = document.createElement("BUTTON");
                                         button.innerHTML = "notes";
                                         first.appendChild(button);
                                         let form4 = document.createElement('INPUT');
-                                        form4.setAttribute("type", "submit");
-                                        first.appendChild(form4);
+						                form4.setAttribute("type", "submit");
+						                first.appendChild(form4);
                                         form4.addEventListener('click', event => {
                                             if(form3.value = "key"){
                                                 document.querySelector("main").innerHTML = "You try to use a key but realize you don't have a key to use. You need to get in this door so you can keep looking or force your way in. What do you do? "
                                                 first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "force"){
                                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can only look around: "
                                                 first.append(main);
                                                 let forms5 = document.createElement('INPUT');
                                                 forms5.setAttribute("type", "text");
-                                                first.appendChild(forms5)
+						                        first.appendChild(forms5)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form6 = document.createElement('INPUT');
-                                                form6.setAttribute("type", "submit");
-                                                first.appendChild(form6);
+						                        form6.setAttribute("type", "submit");
+						                        first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms6.value = "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     }
                                                 })
                                             }
                                         })    
                                     } else if (forms3.value = "look"){
-                                        jail()
+                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                     } else if (forms3.value = "force"){
                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                         first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "key"){
                                                         document.querySelector("main").innerHTML = "You try to use a key but realize you don't have a key to use. You need to get in this door so you only keep looking. So what do you do? "
                                                         first.append(main);
                                                 let forms5 = document.createElement('INPUT');
                                                 forms5.setAttribute("type", "text");
-                                                first.appendChild(forms5)
+						                        first.appendChild(forms5)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form6 = document.createElement('INPUT');
-                                                form6.setAttribute("type", "submit");
-                                                first.appendChild(form6);
+						                        form6.setAttribute("type", "submit");
+						                        first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value = "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: " 
                                                     }
                                                 })
                                             }
@@ -229,38 +206,37 @@ first.appendChild(main);
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
                                         forms3.setAttribute("type", "text");
-                                        first.appendChild(forms3)
+						                first.appendChild(forms3)
                                         button = document.createElement("BUTTON");
                                         button.innerHTML = "notes";
                                         first.appendChild(button);
                                         let form4 = document.createElement('INPUT');
-                                        form4.setAttribute("type", "submit");
-                                        first.appendChild(form4);
+						                form4.setAttribute("type", "submit");
+						                first.appendChild(form4);
                                         form4.addEventListener('click', event => {
                                             if(forms3.value == "key"){
-                                                document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works."
-                                                jail()
+                                                document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                             } else if(forms3.value == "force"){
                                                 document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                                 first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     } else if (forms4.value = "key"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     }
                                                 })    
                                             } else if(forms3.value == "look"){
-                                                jail()
+                                                document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                             }
                                         })
                     } else if (forms1.value = "keep looking"){
@@ -268,76 +244,76 @@ first.appendChild(main);
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
                                         forms3.setAttribute("type", "text");
-                                        first.appendChild(forms3)
+						                first.appendChild(forms3)
                                         button = document.createElement("BUTTON");
                                         button.innerHTML = "notes";
                                         first.appendChild(button);
                                         let form4 = document.createElement('INPUT');
-                                        form4.setAttribute("type", "submit");
-                                        first.appendChild(form4);
+						                form4.setAttribute("type", "submit");
+						                first.appendChild(form4);
                                         form4.addEventListener('click', event => {
                                             if(forms3.value == "key"){
                                                 document.querySelector("main").innerHTML = "You try to use a key but realize you don't have a key to use. You need to get in this door so you can keep looking or force your way in. What do you do? "
                                                 first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value == "force"){
                                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can only look around: "
                                                 first.append(main);
                                                 let forms5 = document.createElement('INPUT');
                                                 forms5.setAttribute("type", "text");
-                                                first.appendChild(forms5)
+						                        first.appendChild(forms5)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form6 = document.createElement('INPUT');
-                                                form6.setAttribute("type", "submit");
-                                                first.appendChild(form6);
+						                        form6.setAttribute("type", "submit");
+						                        first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value == "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                     }
                                                 })
                                             }
                                         })    
                                     } else if (forms3.value == "look"){
-                                        jail()
+                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                     } else if (forms3.value == "force"){
                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                         first.append(main);
                                                 let forms4 = document.createElement('INPUT');
                                                 forms4.setAttribute("type", "text");
-                                                first.appendChild(forms4)
+						                        first.appendChild(forms4)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form5 = document.createElement('INPUT');
-                                                form5.setAttribute("type", "submit");
-                                                first.appendChild(form5);
+						                        form5.setAttribute("type", "submit");
+						                        first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "key"){
                                                         document.querySelector("main").innerHTML = "You try to use a key but realize you don't have a key to use. You need to get in this door so you only keep looking. So what do you do? "
                                                         first.append(main);
                                                 let forms5 = document.createElement('INPUT');
                                                 forms5.setAttribute("type", "text");
-                                                first.appendChild(forms5)
+						                        first.appendChild(forms5)
                                                 button = document.createElement("BUTTON");
                                                 button.innerHTML = "notes";
                                                 first.appendChild(button);
                                                 let form6 = document.createElement('INPUT');
-                                                form6.setAttribute("type", "submit");
-                                                first.appendChild(form6);
+						                        form6.setAttribute("type", "submit");
+						                        first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value = "look"){
-                                                        jail()
+                                                        document.querySelector("main").innerHTML = "You decide to look around the room and the only thing you spot is a potted plant. You dig in the pot and find a key. You decide to use the key on the door. It works. You enter a new room with 5 jail cells wide open nd decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: " 
                                                     }
                                                 })
                                             }
@@ -346,32 +322,11 @@ first.appendChild(main);
                                 })
                             } 
                         })
-
-    }
-    function jail() {
-        document.querySelector("main").innerHTML = "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: " 
-        first.append(main);
-        let jailform = document.createElement('INPUT');
-        jailform.setAttribute("type", "text");
-        first.appendChild(jailform)
-        button = document.createElement("BUTTON");
-        button.innerHTML = "notes";
-        first.appendChild(button);
-        let jailbutton = document.createElement('INPUT');
-        jailbutton.setAttribute("type", "submit");
-        first.appendChild(jailbutton);
-        jailbutton.addEventListener('click', event => {
-            if (jailform.value = "12345"){
-                document.querySelector("main").innerHTML = "test"
-            }
-        })
-    }
-
-}
-    
+                    })
+                }
+            
         
-     
-  </script> 
+  </script>
     </div>
     <div class = "notes">
         Notes
