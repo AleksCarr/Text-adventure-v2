@@ -17,7 +17,11 @@
             const main = document.createElement('main');
 const first = document.querySelector('#game');
 const p = document.createElement('p');
-    
+    const jailarray = ["You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes.",
+"You then  investigate the second cell and see a photograph of a boy but not your son. Added to notes",
+"You investigate the third one next and see the name nicholas etched into the wall. Added to notes",
+"You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes.",
+"You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes."]
 document.querySelector('#game').textContent = '';
 document.querySelector('main').innerHTML ="Before we start this adventure please enter your name: "
 first.appendChild(main);
@@ -53,32 +57,9 @@ first.appendChild(main);
                         form.addEventListener('click', event => {
                             if(forms.value =='right'){
                                 right()
-                            } else if (forms.value =='left'){
-                                left()
-                            }
-                        })
-    }
-    function left() {
-        document.querySelector("main").innerHTML = "You decide to take the left and and soomehow go in a circle and end up back at your car. You decide to take another path which one this time straight or right?"
-                        first.append(main);
-                        let forms1 = document.createElement('INPUT');
-                        forms1.setAttribute("type", "text");
-                        first.appendChild(forms1)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
-                        let form2 = document.createElement('INPUT');
-                        form2.setAttribute("type", "submit");
-                        first.appendChild(form2);
-                        form2.addEventListener('click', event => {
-                            if (forms1.value == "right"){
-                                right()
-                            }
-                        })
 
-    }
-    function right(){
-        document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
+                        function right() {
+                                document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
                         first.append(main);
                         let forms1 = document.createElement('INPUT');
                         forms1.setAttribute("type", "text");
@@ -141,7 +122,7 @@ first.appendChild(main);
                                             } 
                                         })
                                         //Stick then keep looking
-                                    } else if (forms2.value = "keep looking"){
+                                    } else if (forms2.value == "keep looking"){
                                         document.querySelector("main").innerHTML = "You decide to keep looking but get aggravated and kick the door down and enter the shack. Once inside you see a bunch of lanterns leading down into a cave and decide to follow them. When you follow them you reach another locked door you can use key, look around or force your way in what do you do? "
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
@@ -263,7 +244,7 @@ first.appendChild(main);
                                                 jail()
                                             }
                                         })
-                    } else if (forms1.value = "keep looking"){
+                    } else if (forms1.value == "keep looking"){
                         document.querySelector("main").innerHTML = "You decide to keep looking but get aggravated and kick the door down and enter the shack. Once inside you see a bunch of lanterns leading down into a cave and decide to follow them. When you follow them you reach another locked door you can use key, look around or force your way in what do you do? "
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
@@ -346,8 +327,8 @@ first.appendChild(main);
                                 })
                             } 
                         })
-
-    }
+                        }
+    //Come back to this later.
     function jail() {
         document.querySelector("main").innerHTML = "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: " 
         first.append(main);
@@ -361,14 +342,166 @@ first.appendChild(main);
         jailbutton.setAttribute("type", "submit");
         first.appendChild(jailbutton);
         jailbutton.addEventListener('click', event => {
-            if (jailform.value = "12345"){
+            if (jailform.value == "12345"){
                 document.querySelector("main").innerHTML = "test"
+                basement()
+            
             }
         })
-    }
+        }
+        function basement(){
+            document.querySelector("main").innerHTML = "You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+        first.append(main);
+        let basementform = document.createElement('INPUT');
+        basementform.setAttribute("type", "text");
+        first.appendChild(basementform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let basementbutton = document.createElement('INPUT');
+        basementbutton.setAttribute("type", "submit");
+        first.appendChild(basementbutton);
+        basementbutton.addEventListener('click', event => {
+    if(basementform.value == "hammer"){
+        document.querySelector("main").innerHTML = "You pick up the hammer and head on up the stairs to the first floor of the house. Once up there you head to the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
+        irst.append(main);
+        let phoneform = document.createElement('INPUT');
+        phoneform.setAttribute("type", "text");
+        first.appendChild(phoneform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let phonebutton = document.createElement('INPUT');
+        phonebutton.setAttribute("type", "submit");
+        first.appendChild(phonebutton);
+        phonebutton.addEventListener('click', event => {
+            if(phoneform.value == "email"){
+                email()
+            } else if (phoneform.value == "camera"){
+                camera()
+            } else if (phoneform.value == "contacts"){
+                contacts()
+            }
+        })
 
+        } else if (basementform.value == "drill"){
+            document.querySelector("main").innerHTML = "You pick up the cordless drill and realize it comes with two sets of extra batteries worth an hour charge each. You then head on up the stairs to the first floor of the house. Once up there you head to the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
+            irst.append(main);
+        let phoneform = document.createElement('INPUT');
+        phoneform.setAttribute("type", "text");
+        first.appendChild(phoneform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let phonebutton = document.createElement('INPUT');
+        phonebutton.setAttribute("type", "submit");
+        first.appendChild(phonebutton);
+        phonebutton.addEventListener('click', event => {
+            if(phoneform.value == "email"){
+                email()
+            } else if (phoneform.value == "camera"){
+                camera()
+            } else if (phoneform.value == "contacts"){
+                contacts()
+            }
+        })
+        } else if (basementform.value == "gun"){
+            document.querySelector("main").innerHTML = "You pick up the gun and see it is a (insert pistol name here) with a clip size of (common clip size for said pistol). It also comes with 2 extra clips. You then head on up the stairs to the first floor of the house. Once up there you head to the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
+            first.append(main);
+        let phoneform = document.createElement('INPUT');
+        phoneform.setAttribute("type", "text");
+        first.appendChild(phoneform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let phonebutton = document.createElement('INPUT');
+        phonebutton.setAttribute("type", "submit");
+        first.appendChild(phonebutton);
+        phonebutton.addEventListener('click', event => {
+            if(phoneform.value == "email"){
+                email()
+            } else if (phoneform.value == "camera"){
+                camera()
+            } else if (phoneform.value == "contacts"){
+                contacts()
+            }
+        })
+        }
+
+        function email() {
+            document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. What do you search next?"
+                first.append(main);
+                let phone1form = document.createElement('INPUT');
+                phone1form.setAttribute("type", "text");
+                first.appendChild(phone1form)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let phone1button = document.createElement('INPUT');
+                phone1button.setAttribute("type", "submit");
+                first.appendChild(phone1button);
+                phone1button.addEventListener('click', event => {
+            if(phone1form.value = "camera"){
+                document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kidsthey enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes."
+            } else if(phone1form.value == "contact"){
+                document.querySelector("main").innerHTML = "You search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes"
+            } 
+            })
+
+        }
+
+        function camera() {
+            document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. What do you search next?"
+            first.append(main);
+                let phone2form = document.createElement('INPUT');
+                phone2form.setAttribute("type", "text");
+                first.appendChild(phone2form)
+                button = document.createElement("BUTTON");
+                button.innerHTML = "notes";
+                first.appendChild(button);
+                let phone2button = document.createElement('INPUT');
+                phone2button.setAttribute("type", "submit");
+                first.appendChild(phone2button);
+                phone2button.addEventListener('click', event => {
+                    if(phone2form.value == "email"){
+                        document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search the contacts and open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. "
+                    } else if (phone2form.value == "contacts"){
+                        document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes."
+                    }
+                })
+            
+
+        }
+        
+        function contacts(){
+            document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. What do you search next?"
+            let phone3form = document.createElement('INPUT');
+                phone3form.setAttribute("type", "text");
+                first.appendChild(phone3form)
+                button = document.createElement("BUTTON");
+                button.innerHTML = "notes";
+                first.appendChild(button);
+                let phone3button = document.createElement('INPUT');
+                phone3button.setAttribute("type", "submit");
+                first.appendChild(phone3button);
+                phone3button.addEventListener('click', event => {
+                    if(phone3form.value == "camera"){
+                        document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. "
+                    } else if (phone3form.value == "email"){
+                        document.querySelector("main").innerHTML = "You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes."
+                    }
+                })
+
+            }
+        })
+
+        }
+    }
+})
+    }
 }
     
+
         
      
   </script> 
