@@ -62,7 +62,8 @@ first.appendChild(main);
                             } else if(forms.value == "straight"){
                                 straight()
                             }
-
+                        })
+                    }
 
                             function left(){
                                 document.querySelector("main").innerHTML = "You decide to take the left and and soomehow go in a circle and end up back at your car. You decide to take another path which one this time straight or right?"
@@ -454,6 +455,8 @@ first.appendChild(main);
             }
         })
         }
+    })
+}
 
         function email() {
             document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. What do you search next?"
@@ -673,17 +676,49 @@ first.appendChild(main);
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
-                + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                + chapter1()
+                + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
+                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    }
+                })
+
             } else if (room1.form == " living room"){
                         document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
                 "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
-                "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
-                + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                + chapter1()
+                "<br><br>You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
+                + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
+                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    }
+                })
+            
             }
 
 
@@ -710,16 +745,48 @@ first.appendChild(main);
                     if(room1form.value == "attic"){
                         document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs." +
                         "You finally search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
-                        + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                        + chapter1()
+                        + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
+                        + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                        first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    }
+                })
+                    
                     } else if (room1form.value == "kitchen"){
                             document.querySelector("main").innerHTML = "You decide to go to the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." +
                             "You finally decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
-                            + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                        + chapter1()
+                            + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
+                            + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                            first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    }
+                })
+                        
                         }
                     })
-
+                }
         function attic(){
             document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs. What do you search next?" 
             first.append(main);
@@ -739,9 +806,26 @@ first.appendChild(main);
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
-                "You finally decide to search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
-                + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                        + chapter1()
+                "<br><br>You finally decide to search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
+                + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
+                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"      
+                first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    } 
+                })
+            
+            
             } else if(room1.value == "kitchen"){
                         document.querySelector("main").innerHTML = "you search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." + 
                 "You finally investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
@@ -749,21 +833,32 @@ first.appendChild(main);
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
-                + "You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-            + chapter1()
-            }
-        })
-    }
-}
-    })
-}
-})
-    }
+                + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate" 
+                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                first.append(main);
+                let endform = document.createElement('INPUT');
+                endform.setAttribute("type", "text");
+                first.appendChild(endform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let endbutton = document.createElement('INPUT');
+                endbutton.setAttribute("type", "submit");
+                first.appendChild(endbutton);
+                endbutton.addEventListener('click', event => { 
+                    if(endform.value == "yes"){
+                        chapter1()
+                    }
+                })
+                        }
+                    })
+                }
+            
+       
     function chapter1(){
-        document.querySelector("main").innerHTML = "test"
+        document.querySelector("main").textContent = "test"
     }
 }
-
      
   </script> 
     </div>
