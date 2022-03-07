@@ -79,14 +79,183 @@ first.appendChild(main);
         first.appendChild(phonebutton);
         phonebutton.addEventListener('click', event => {
             if(phoneform.value == "email"){
-                email()
+                email1()
             } else if (phoneform.value == "camera"){
-                camera()
+                camera1()
             } else if (phoneform.value == "contacts"){
-                contacts()
+                contacts1()
             }
         })
         }
+
+        function email1(){
+            document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes. What do you search next?"
+                first.append(main);
+                let phone1form = document.createElement('INPUT');
+                phone1form.setAttribute("type", "text");
+                first.appendChild(phone1form)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let phone1button = document.createElement('INPUT');
+                phone1button.setAttribute("type", "submit");
+                first.appendChild(phone1button);
+                phone1button.addEventListener('click', event => {
+            if(phone1form.value == "camera"){
+                document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kidsthey enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. You then search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes."
+                + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?" 
+                basement1()
+            } else if (phone1form.value == "contacts") {
+            document.querySelector("main").innerHTML = "You search the contacts and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. You then search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes."
+            + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?"
+            basement1()
+        }
+    })
+}
+
+function basement1() {
+    first.append(main);
+        let basementform = document.createElement('INPUT');
+        basementform.setAttribute("type", "text");
+        first.appendChild(basementform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let basementbutton = document.createElement('INPUT');
+        basementbutton.setAttribute("type", "submit");
+        first.appendChild(basementbutton);
+        basementbutton.addEventListener('click', event => {
+    if(basementform.value == "hammer"){
+        document.querySelector("main").innerHTML = "You pick up the hammer and head on up the stairs to the first floor of the house. Once up there you decide to get the power on. You find a fuse box with two missing fuses."
+        + "You find the two fuses and put them into the fuse box. The house lights up but poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first?"
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    } 
+                })   
+    } else if (basementform.value == "gun"){
+            document.querySelector("main").innerHTML = "You pick up the gun and see it is a (insert pistol name here) with a clip size of (common clip size for said pistol). It also comes with 2 extra clips. You then head on up the stairs to the first floor of the house. Once up there you decide to get the power on. You find a fuse box with two missing fuses."
+        + "You find the two fuses and put them into the fuse box. The house lights up but poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first?"
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    } 
+                })   
+    } else if (basementform.value == "drill"){
+            document.querySelector("main").innerHTML = "You pick up the cordless drill and realize it comes with two sets of extra batteries worth an hour charge each. You then head on up the stairs to the first floor of the house. Once up there you decide to get the power on. You find a fuse box with two missing fuses."
+        + "You find the two fuses and put them into the fuse box. The house lights up but poorly. You realize you've been here before, this house used to belong to your old friend Nate" +
+                        "who went missing 10 years ago. You didn't investigate his dissappearance because his really close friends who were closer than you were to him told you not to worry that everything is fine." +
+                        "You deduct that this house must be making people disappear. So you decide to look around since you know the layout. it is a rather small house with only 3 room. A kitchen, A living room and an attic. What do you search first?"
+        
+                        first.append(main);
+                let roomform = document.createElement('INPUT');
+                roomform.setAttribute("type", "text");
+                first.appendChild(roomform)
+                button = document.createElement("BUTTON");
+                button.innerHTML == "notes";
+                first.appendChild(button);
+                let roombutton = document.createElement('INPUT');
+                roombutton.setAttribute("type", "submit");
+                first.appendChild(roombutton);
+                roombutton.addEventListener('click', event => {
+                    if(roomform.value == "living room"){
+                        livingroom()
+                    } else if(roomform.value == "kitchen"){
+                        kitchen()
+                    } else if(roomform.value == "attic"){
+                        attic()
+                    } 
+                })   
+                    }
+    })
+}
+
+function camera1() {
+    document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes. What do you search next?"
+            first.append(main);
+                let phone2form = document.createElement('INPUT');
+                phone2form.setAttribute("type", "text");
+                first.appendChild(phone2form)
+                button = document.createElement("BUTTON");
+                button.innerHTML = "notes";
+                first.appendChild(button);
+                let phone2button = document.createElement('INPUT');
+                phone2button.setAttribute("type", "submit");
+                first.appendChild(phone2button);
+                phone2button.addEventListener('click', event => {
+                    if(phone2form.value == "email"){
+                        document.querySelector("main").innerHTML = "You go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes."
+                        + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?"
+                        basement1()
+                    } else if (phone2form.value == "contacts"){
+                        document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes."
+                        + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?"  
+                        basement1()
+                    }
+                })
+            } 
+
+            function contacts1(){
+                document.querySelector("main").innerHTML = "You open up the contacts app and only see one number. You decide to call it. When you do someone picks up and you recognize that voice. It is your own assistants voice. You ask who this phone belongs to. Your assistant says it belonged to one of her former employers which was one of your former colleagues. Contact added to notes. What do you search next?"
+            let phone3form = document.createElement('INPUT');
+                phone3form.setAttribute("type", "text");
+                first.appendChild(phone3form)
+                button = document.createElement("BUTTON");
+                button.innerHTML = "notes";
+                first.appendChild(button);
+                let phone3button = document.createElement('INPUT');
+                phone3button.setAttribute("type", "submit");
+                first.appendChild(phone3button);
+                phone3button.addEventListener('click', event => {
+                    if(phone3form.value == "camera"){
+                        document.querySelector("main").innerHTML = "You search through the phones camera and see a video you decide to play it. The video starts out with another journalist looking for answers about the missing kids they enter the house as they enter everything they realize it is really cold. They say this is the first sign of evil being present. They hear a noise from the basement and decide to investigate the basement first but when they go down there, there is just darkness but you can hear the fainest scream and then the video ends. Video added to notes."
+                        + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?"
+                        basement1()
+                    } else if (phone3form.value == "email"){
+                        document.querySelector("main").innerHTML = "You then search the email, you go through this phones email and realize this phone belonged to one of your colleagues who just left one day. Didn't say where he was going but guess he was investigating this. Email recipient added to notes."
+                        + "Once you are done with the phone you decide to follow in your colleagues footsteps and go into the basement. Once down there you realize how cold it is compared to the first floor of the house. You notice chains and torture equipment down there. You decide based on what you saw in the phone that you should get a weapon."
+            + "You search around and see a gun, a cordless drill and a hammer which one do you take?"  
+                        basement1()
+                    }
+        })
+    }
 
                             function left(){
                                 document.querySelector("main").innerHTML = "You decide to take the left and and soomehow go in a circle and end up back at your car. You decide to take another path which one this time straight or right?"
@@ -415,7 +584,7 @@ first.appendChild(main);
         basementbutton.addEventListener('click', event => {
     if(basementform.value == "hammer"){
         document.querySelector("main").innerHTML = "You pick up the hammer and head on up the stairs to the first floor of the house. Once up there you head to the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
-        irst.append(main);
+        first.append(main);
         let phoneform = document.createElement('INPUT');
         phoneform.setAttribute("type", "text");
         first.appendChild(phoneform)
@@ -437,7 +606,7 @@ first.appendChild(main);
 
         } else if (basementform.value == "drill"){
             document.querySelector("main").innerHTML = "You pick up the cordless drill and realize it comes with two sets of extra batteries worth an hour charge each. You then head on up the stairs to the first floor of the house. Once up there you head to the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
-            irst.append(main);
+            first.append(main);
         let phoneform = document.createElement('INPUT');
         phoneform.setAttribute("type", "text");
         first.appendChild(phoneform)
@@ -700,7 +869,7 @@ first.appendChild(main);
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                 first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
@@ -725,7 +894,7 @@ first.appendChild(main);
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                 "<br><br>You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                 first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
@@ -769,7 +938,7 @@ first.appendChild(main);
                         document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs." +
                         "You finally search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
                         + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                        + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                        + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                         first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
@@ -790,7 +959,7 @@ first.appendChild(main);
                             document.querySelector("main").innerHTML = "You decide to go to the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." +
                             "You finally decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
                             + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                            + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                            + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                             first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
@@ -831,7 +1000,7 @@ first.appendChild(main);
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                 "<br><br>You finally decide to search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
-                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"      
+                + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"      
                 first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
@@ -857,7 +1026,7 @@ first.appendChild(main);
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
                 "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes"
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate" 
-                + "End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
+                + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                 first.append(main);
                 let endform = document.createElement('INPUT');
                 endform.setAttribute("type", "text");
