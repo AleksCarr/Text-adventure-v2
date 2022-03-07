@@ -64,6 +64,29 @@ first.appendChild(main);
                             }
                         })
                     }
+                    function straight(){
+                        document.querySelector("main").innerHTML = "You decide to go the straight path and end up at a creepy old run down wooden house. With a locked gate out front you look and it looks like no one has been here for 10 years. You try to look for a key but the gate mysteriously swings open. You enter the gate and" +
+                        "decide to look around the yard. You look around for a good 5 mminutes before realizing it is pointless and that there is nothing outside. You go into the entry way and see a mysterious phone. You pick it up and decide to search it. What app do you search first?"
+                        first.append(main);
+        let phoneform = document.createElement('INPUT');
+        phoneform.setAttribute("type", "text");
+        first.appendChild(phoneform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        let phonebutton = document.createElement('INPUT');
+        phonebutton.setAttribute("type", "submit");
+        first.appendChild(phonebutton);
+        phonebutton.addEventListener('click', event => {
+            if(phoneform.value == "email"){
+                email()
+            } else if (phoneform.value == "camera"){
+                camera()
+            } else if (phoneform.value == "contacts"){
+                contacts()
+            }
+        })
+        }
 
                             function left(){
                                 document.querySelector("main").innerHTML = "You decide to take the left and and soomehow go in a circle and end up back at your car. You decide to take another path which one this time straight or right?"
