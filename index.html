@@ -398,8 +398,10 @@ function camera1() {
                                         first.appendChild(form4);
                                         form4.addEventListener('click', event => {
                                             if(forms3.value == "key"){
-                                                jail()
-                                         }else if(forms3.value == "force"){
+                                                document.querySelector("main").innerHTML = "To your disbelief the key actually works" + jail()
+                                                + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
+                                                        jail()
+                                            }else if(forms3.value == "force"){
                                                 document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                                 first.append(main);
                                                 let forms4 = document.createElement('INPUT');
@@ -419,8 +421,12 @@ function camera1() {
                                                 first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     } else if (forms4.value = "key"){
+                                                        document.querySelector("main").innerHTML = "To your disbelief the key actually works"
+                                                       + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })    
@@ -485,13 +491,17 @@ function camera1() {
                                                 first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms6.value = "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })
                                             }
                                         })    
                                     } else if (forms3.value = "look"){
-                                        jail()
+                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                       + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
+                                                        jail()
                                     } else if (forms3.value = "force"){
                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                         first.append(main);
@@ -531,6 +541,8 @@ function camera1() {
                                                 first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value = "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })
@@ -561,7 +573,8 @@ function camera1() {
                                         form4.addEventListener('click', event => {
                                             if(forms3.value == "key"){
                                                 document.querySelector("main").innerHTML = "You try to use the key and to your disbelief it actually works."
-                                                jail()
+                                               + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
+                                                        jail()
                                             } else if(forms3.value == "force"){
                                                 document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                                 first.append(main);
@@ -582,13 +595,19 @@ function camera1() {
                                                 first.appendChild(form5);
                                                 form5.addEventListener('click', event => {
                                                     if(forms4.value = "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     } else if (forms4.value = "key"){
+                                                        document.querySelector("main").innerHTML = "To your disbelief the key actually works" 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })    
                                             } else if(forms3.value == "look"){
-                                                jail()
+                                                document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
+                                                        jail()
                                             }
                                         })
                     } else if (forms1.value == "keep looking"){
@@ -649,13 +668,17 @@ function camera1() {
                                                 first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value == "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })
                                             }
                                         })    
                                     } else if (forms3.value == "look"){
-                                        jail()
+                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        + "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
+                                                        jail()
                                     } else if (forms3.value == "force"){
                                         document.querySelector("main").innerHTML = "You try to force your way in but it won't budge. You still need to get in this door so you can still use key or look around: "
                                         first.append(main);
@@ -695,6 +718,8 @@ function camera1() {
                                                 first.appendChild(form6);
                                                 form6.addEventListener('click', event => {
                                                     if(forms5.value = "look"){
+                                                        document.querySelector("main").innerHTML = "You look around the room and see a potted plant. You dig in the pot and find a key. You unlock the door." + 
+                                                        "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: "
                                                         jail()
                                                     }
                                                 })
@@ -706,8 +731,7 @@ function camera1() {
                         })
                         }
     //Come back to this later.
-    function jail() {
-        document.querySelector("main").innerHTML = "You enter a new room with 5 jail cells wide open and decide to investigate each one. Which do you enter first 1-5. Hint: enter a number like 12345: " 
+    function jail() { 
         first.append(main);
         let jailform = document.createElement('INPUT');
         jailform.setAttribute("type", "text");
