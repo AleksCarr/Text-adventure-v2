@@ -18,12 +18,8 @@
             const body = document.createElement('body');
 const first = document.querySelector('#game');
 const p = document.createElement('p');
-    const jailarray = ["You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes.",
-"You then  investigate the second cell and see a photograph of a boy but not your son. Added to notes",
-"You investigate the third one next and see the name nicholas etched into the wall. Added to notes",
-"You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes.",
-"You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes."]
 document.querySelector('#game').textContent = '';
+
 document.querySelector('main').innerHTML ="Before we start this adventure please enter your name: "
 first.appendChild(main);
 </script>
@@ -367,6 +363,8 @@ function camera1() {
                     }
 
                     function right() {
+                        document.body.style.backgroundImage = "url('https://cdn106.picsart.com/207113369000202.jpg?r1024x1024')"
+                        document.body.style.backgroundSize="100% 100%";
                         document.querySelector("main").innerHTML = "You decide to take the right path and end up at an opening with a locked creepy old shack. You tell yourself you need to get inside this. You decide to look around and see a rock and a stick which one will you use?"
                         first.append(main);
                         let forms1 = document.createElement('INPUT');
@@ -407,6 +405,8 @@ function camera1() {
                                     //Stick then rock
                                     if(forms2.value == 'rock'){
                                         document.querySelector("main").innerHTML = "You pick up the rock and see a key hidden underneath it. You pick it up and unlock the shack. Once inside you see a bunch of lanterns leading down into a cave and decide to follow them. When you follow them you reach another locked door you can use key, look around or force your way in what do you do? "
+                                        document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/02/67/d4/0267d4c31b4d4af86b5a5af2ca3493b2.jpg')"
+                        document.body.style.backgroundSize="100% 100%";
                                         first.append(main);
                                         let forms3 = document.createElement('INPUT');
                                         forms3.setAttribute("type", "text");
@@ -758,33 +758,8 @@ function camera1() {
                         })
                     }
     //Come back to this later.
-    function jail() { 
-        first.append(main);
-        let jailform = document.createElement('INPUT');
-        jailform.setAttribute("type", "text");
-        first.appendChild(jailform)
-        button = document.createElement("BUTTON");
-        button.innerHTML = "notes";
-        first.appendChild(button);
-        button1 = document.createElement("button");
-                        button1.innerHTML = "Restart";
-                        first.appendChild(button1);
-                        button1.addEventListener('click', event => {
-                            document.location.reload()
-                        })
-        let jailbutton = document.createElement('INPUT');
-        jailbutton.setAttribute("type", "submit");
-        first.appendChild(jailbutton);
-        jailbutton.addEventListener('click', event => {
-            if (jailform.value == "12345"){
-                document.querySelector("main").innerHTML = "test"
-                basement()
-            
-            }
-        })
-        }
+    
         function basement(){
-            document.querySelector("main").innerHTML = "You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
         first.append(main);
         let basementform = document.createElement('INPUT');
         basementform.setAttribute("type", "text");
@@ -1394,12 +1369,57 @@ function camera1() {
             
        
     function chapter1(){
+        setTimeout(function(){
+    document.querySelector("main").innerHTML = "after five minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. THey go away and now's your chance to run away." +
+    "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you brak your chair and run back quickly. Now's your chance to hide where will you hide?"
+    hide(); 
+}, 300 * 1000); // time in milliseconds
         document.querySelector("main").innerHTML = "No one of the family is talking so you sit there until you decide to say something. What do you say?"
         button1 = document.createElement("BUTTON");
                         button1.innerHTML = "Why am I here?";
                         first.appendChild(button1);
                         button1.id = "option1"
-                        button2 = document.createElement("BUTTON");
+                        button1.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "No one speaks for about 30 seconds then the older gentlemen introduces himself as Edward Cross. He responds to your question by saying: "+
+                            "You are here to be our main course at 5:00 pm which is 4 hours away so don't go anywhere we don't want to have to kill you before it is time. You decide to ask another question: "
+                            button1.innerHTML = "Why am I here?";
+                            first.appendChild(button1);
+                            button1.id = "option5"
+                            button2 = document.createElement("BUTTON");
+                            button2.innerHTML = "Nate?";
+                            first.appendChild(button2);
+                            button2.id = "option6"
+                            button3 = document.createElement("BUTTON");
+                            button3.innerHTML = "Why am I chained up like this?";
+                            first.appendChild(button3);
+                            button3.id = "option7"
+                            button4 = document.createElement("BUTTON");
+                            button4.innerHTML = "Say nothing";
+                            first.appendChild(button4);
+                            button4.id = "option8"
+                            notes = document.createElement("BUTTON");
+                            notes.innerHTML = "notes";
+                            notes.id = "notes"
+                            first.appendChild(notes);
+                            restart = document.createElement("button");
+                            restart.innerHTML = "Restart";
+                            restart.id = "restart"
+                            first.appendChild(restart);
+                            restart.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                    })
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            button2 = document.createElement("BUTTON");
                         button2.innerHTML = "Nate?";
                         first.appendChild(button2);
                         button2.id = "option2"
@@ -1424,6 +1444,1026 @@ function camera1() {
                         })
                        
     }
+    function hide(){
+        let hideform = document.createElement('INPUT');
+                hideform.setAttribute("type", "text");
+                first.appendChild(hideform)
+                button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                let hidebutton = document.createElement('INPUT');
+                hidebutton.setAttribute("type", "submit");
+                first.appendChild(hidebutton);
+                hidebutton.addEventListener('click', event => { 
+                })
+    }
+
+    function jail() { 
+        first.append(main);
+        let jailform = document.createElement('INPUT');
+        jailform.setAttribute("type", "text");
+        first.appendChild(jailform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+        let jailbutton = document.createElement('INPUT');
+        jailbutton.setAttribute("type", "submit");
+        first.appendChild(jailbutton);
+        jailbutton.addEventListener('click', event => {
+            if (jailform.value == "12345"){
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+"<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+"<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+"<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+"<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." + 
+"<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+            
+            } else if (jailform.value == "12354" ){
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+"<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+"<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+"<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." + 
+"<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+      
+"<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+            
+            } else if (jailform.value == "12435" ){
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+"<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+"<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+"<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+"<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+"<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+            
+            } else if (jailform.value == "12453" ){ 
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+"<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+"<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+"<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+"<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+"<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+            
+            } else if  (jailform.value == "12534" ){ 
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+"<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+"<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+"<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+"<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+"<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                
+            } else if (jailform.value == "12543") {
+                document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                    basement()
+                } else if (jailform.value == "13245") {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == "13254") {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == "13425") {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("13452")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("13524")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("13542")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14235")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14253")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14325")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14352")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14523")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("14532")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15234")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15243")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15342")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15324")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15423")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("15432")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                }
+                //starting with 2
+
+                else if (jailform.value == ("21345")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("21354")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("21435")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("21453")) {
+                        document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("21534")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("21543")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23145")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23154")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23415")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23451")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23514")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("23541")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("24135")) {
+                        document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("24153")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("24315")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("24351")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("24513")) {
+                        document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("24531")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("25134")) {
+                        document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("25143")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("25341")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("25314")) {
+                        document.querySelector("main").innerHTML =  "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("25413")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("25431")) {
+                    document.querySelector("main").innerHTML = "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    }
+
+                //Starting with 3
+                else if (jailform.value == ("31245")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("31254")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("31425")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("31452")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("31524")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("31542")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("32145")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("32154")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("32415")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("32451")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("32514")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("32541")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("34125")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("34152")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("34215")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("34251")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("34512")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("34521")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("35124")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("35142")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("35241")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("35214")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("35412")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("35421")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    }
+                //Starting with 4
+
+                else if (jailform.value == ("41235")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("41253")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("41325")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("41352")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("41523")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("41532")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("42135")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("42153")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("42315")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("42351")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("42513")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("42531")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("43125")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("43152")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("43215")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("43251")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("43512")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("43521")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("45123")) {
+                        document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("45132")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("45231")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("45213")) {
+                        document.querySelector("main").innerHTML =  "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("45312")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("45321")) {
+                    document.querySelector("main").innerHTML = "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    }
+                //Starting with 5
+
+                else if (jailform.value == ("51234")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("51243")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("51324")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("51342")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("51423")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("51432")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("52134")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("52143")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("52314")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("52341")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("52413")) {
+                        document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("52431")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("53124")) {
+                        document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("53142")) {
+                    document.querySelector("main").innerHTML =  "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("53214")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("53241")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("53412")) {
+                        document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("53421")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("54123")) {
+                        document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("54132")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("54231")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    } else if (jailform.value == ("54213")) {
+                        document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("54312")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                    "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                    "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                   "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                    "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                    "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                } else if (jailform.value == ("54321")) {
+                    document.querySelector("main").innerHTML = "<br><br>You search the last cell number 5 and see camping backpack that you recognize as your sons. Added to notes." +
+                     "<br><br>You investigate the fourth cell and another note is there. It says if you find this before 5pm just know we are still alive I got word from one of the captors that we die at 5 so hurry. This is added to notes."+
+                     "<br><br>You investigate the third one next and see the name nicholas etched into the wall. Added to notes"+
+                     "<br><br>You then investigate the second cell and see a photograph of a boy but not your son. Added to notes"+
+                     "<br><br>You investigate the first jail cell and see a note on the ground. It says  if you are reading this it is over we will all die in a few hours. The note is dated august 5th at 11:00 am.  This is added to your notes."+
+                     "<br><br>You investigated all jail cells and continue forward and go up stairs and through a door to a basement looking room of a house. As you enter you realize how colder it is compared to the outside. You decide you need a weapon based on what the jail cells you investigated told you. You look around a bit and see a hammer, a cordless drill and a gun. Which one do you take?"
+                basement()
+                    }
+            })
+        }
 } 
   </script> 
     </div>

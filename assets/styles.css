@@ -18,7 +18,7 @@
   }
   */
   body {
-      background: grey;
+    background: grey;
       color: #fefefe;
       align-items: center;
       justify-content: center;
@@ -27,6 +27,7 @@
     font-family: Helvetica, Arial, sans-serif;
     display: block;
   }
+
   main{
     font-size: 1em;
 }
@@ -78,6 +79,10 @@ button{
 #notes{
   margin-left: 40%;
   margin-top: 5%;
+}
+
+#option5{
+  margin-left: 3%;
 }
 
 
