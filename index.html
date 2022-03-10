@@ -70,13 +70,17 @@ first.appendChild(main);
         document.querySelector("main").innerHTML = "Welcome" +"&nbsp" + text + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +         
         "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
  "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." + 
- " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>";
+ " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>" +
+ "If it says added to notes press the notes button to add it";
  let forms = document.createElement('INPUT');
                         forms.setAttribute("type", "text");
                         first.appendChild(forms)
                         button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML = "Your son went missing when returning from camp. You are here to look for him.";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -108,6 +112,9 @@ first.appendChild(main);
         button = document.createElement("BUTTON");
         button.innerHTML = "notes";
         first.appendChild(button);
+        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy old house. probably where your son is";
+        })
         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -139,6 +146,9 @@ first.appendChild(main);
                 button = document.createElement("BUTTON");
                 button.innerHTML == "notes";
                 first.appendChild(button);
+                button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Email verifying this belonged to your colleague";
+        })
                 button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -171,8 +181,11 @@ function basement1() {
         basementform.setAttribute("type", "text");
         first.appendChild(basementform)
         button = document.createElement("BUTTON");
-        button.innerHTML = "notes";
-        first.appendChild(button);
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy basement with torture equipment";
+        })
         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -193,8 +206,8 @@ function basement1() {
                 roomform.setAttribute("type", "text");
                 first.appendChild(roomform)
                 button = document.createElement("BUTTON");
-                button.innerHTML == "notes";
-                first.appendChild(button);
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
                 button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -223,8 +236,8 @@ function basement1() {
                 roomform.setAttribute("type", "text");
                 first.appendChild(roomform)
                 button = document.createElement("BUTTON");
-                button.innerHTML == "notes";
-                first.appendChild(button);
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
                 button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -289,6 +302,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                 button.innerHTML = "notes";
                 first.appendChild(button);
+                button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone with weird video of death and figure it belonged to your colleague";
+        })
                 button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -322,6 +338,9 @@ function camera1() {
                 first.appendChild(phone3form)
                 button = document.createElement("BUTTON");
                 button.innerHTML = "notes";
+                button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone that belonged to your colleague";
+        })
                 first.appendChild(button);
                 button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
@@ -786,6 +805,9 @@ function camera1() {
         button = document.createElement("BUTTON");
         button.innerHTML = "notes";
         first.appendChild(button);
+        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>5 jail cells first one is a note saying they will die soon. Second one is a picture of a young boy that you dont recognize. Third one is the name nicholas etched in wall. Fourth one is another note saying they die at 5:00pm which is 5 hours away. Fifth one is your sons backpack. Creepy basement with torture equipment";
+        })
         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -893,6 +915,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Email verifying this belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -914,6 +939,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone with weird video of death and figure it belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -944,6 +972,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone that belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -978,6 +1009,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone with weird video of death and figure it belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1000,6 +1034,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Email verifying this belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1032,6 +1069,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone that belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1066,6 +1106,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone that belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1088,6 +1131,10 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy phone with weird video of death and figure it belonged to your colleague";
+        })
+
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1118,6 +1165,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Email verifying this belonged to your colleague";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1150,6 +1200,9 @@ function camera1() {
                 first.appendChild(room1form)
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Kitchen that seems like someone was here recently";
+        })
                         first.appendChild(button);
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
@@ -1179,6 +1232,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy attic that is really run down and creepy videos of nate";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1194,7 +1250,7 @@ function camera1() {
                     }
                 })
 
-            } else if (room1form.value == " living room"){
+            } else if (room1form.value == "living room"){
                 document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.19e91f8b7cf17a4c4d949ec5da1da123?rik=WfVOOrwpIoowwQ&riu=http%3a%2f%2fwww.cheatsheet.com%2fwp-content%2fuploads%2f2017%2f05%2fcharlies-apartment.png&ehk=ku%2bHCkTKlc7QJZzdQmhYCJQ5WwrKoXIp%2bgcTOZxJuDI%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize="100% 100%";
                         document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
@@ -1212,6 +1268,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy videos of nate and really run down attic";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1248,6 +1307,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy videos of nate";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1272,6 +1334,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy run down attic and kitchen that someone was at not too long ago";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1301,6 +1366,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy run down kitchen that someone was at not too long ago and run down attic";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1330,6 +1398,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy run down attic";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1358,6 +1429,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy videos of nate and run down kitchen that someone was at not too long ago";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1392,6 +1466,9 @@ function camera1() {
                 button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
+                        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>creepy run down kitchen that someone was at not too long ago and videos of nate";
+        })
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -1519,6 +1596,9 @@ function camera1() {
         button = document.createElement("BUTTON");
         button.innerHTML = "notes";
         first.appendChild(button);
+        button.addEventListener('click', event => {
+            document.querySelector('p').innerHTML += "<br>Creepy shack with a cave leading to jail cells";
+        })
         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -2515,7 +2595,8 @@ function camera1() {
   </script> 
     </div>
     <div class = "notes">
-        Notes
+        <span>Notes</span>
+        <p></p>
         </div>
     </main>
     <script src="assets/main.js">

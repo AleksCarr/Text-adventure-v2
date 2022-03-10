@@ -1,22 +1,8 @@
-/*, *:after, *:before {
-    box-sizing: border-box;
-  }
- */ 
+
   html {
     font-size: 1.2em;
   }
   
-  /*body {
-    align-items: center;
-    background: #343434;
-    color: #fefefe;
-    display: flex;
-    font-family: Helvetica, Arial, sans-serif;
-    justify-content: center;
-    line-height: 200%;
-    min-height: 100vh;
-  }
-  */
   body {
     background: grey;
       color: #fefefe;
@@ -63,13 +49,13 @@ button{
 
 .notes{
   width: 200px;
-  height: 200px;
+  height: 700px;
   border: 1px solid;
   min-height: 10vh;
   line-height: 100%;
     font-size: 1em;
     margin-left: 85%;
-    margin-top: -10%;
+    margin-top: -40%;
     border-bottom: none;
     background-color: lightyellow;
     color: black;
@@ -85,7 +71,12 @@ button{
   margin-left: 3%;
 }
 
+span{
+  font-size: 1em;
+}
 
-
-
-
+p{
+  font-size: 0.1em;
+  min-height: 10vh;
+  line-height: 100%;
+}
