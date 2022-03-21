@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Text-Adventure Game</title>
 
@@ -71,7 +71,7 @@ first.appendChild(main);
         "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
  "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." + 
  " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>" +
- "If it says added to notes press the notes button to add it";
+ "Press the notes button whenever to add things to notepad";
  let forms = document.createElement('INPUT');
                         forms.setAttribute("type", "text");
                         first.appendChild(forms)
@@ -86,6 +86,12 @@ first.appendChild(main);
                         first.appendChild(button1);
                         button1.addEventListener('click', event => {
                             document.location.reload()
+                        })
+                        button2 = document.createElement("button");
+                        button2.innerHTML = "Save";
+                        first.appendChild(button2);
+                        button2.addEventListener('click', event => {
+                            
                         })
                         let form = document.createElement('INPUT');
                         form.setAttribute("type", "submit");
@@ -2499,8 +2505,8 @@ function camera1() {
     document.querySelector("main").innerHTML = "after five minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. THey go away and now's your chance to run away." +
     "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you brak your chair and run back quickly. Now's your chance to hide where will you hide?"
     hide(); 
-}, 300 * 1000); // time in milliseconds
-        document.querySelector("main").innerHTML = "No one of the family is talking so you sit there until you decide to say something. What do you say?"
+}, 30 * 1000); // time in milliseconds
+        document.querySelector("main").innerHTML = "You look around and realize you don't have any of your things. No one of the family is talking so you sit there until you decide to say something. What do you say?"
         button1 = document.createElement("BUTTON");
                         button1.innerHTML = "Why am I here?";
                         first.appendChild(button1);
@@ -2587,11 +2593,118 @@ function camera1() {
                 hidebutton.setAttribute("type", "submit");
                 first.appendChild(hidebutton);
                 hidebutton.addEventListener('click', event => { 
+                    if(hideform.value == "kitchen"){
+                        kitchens()
+                    } else if(hideform.value == "living room"){
+                        document.querySelector("main").innerHTML = "You decide to hide in the living room. You go into the living room and see a fancy couch, a cabinet and a old grandfather clock. You try to hide in the cabinet but realize this is too suspicious and that they will definitely look there. Your only other choice is to hide under the couch. So you do that."
+                        +"When the cross family comes back they see you are gone and begin investigating. Edward stays on the first floor and begins talking to himself. He says how dare he escape we weren't gonna kill him we had a lunch prepared for him. It wasn't even any of those annoying kids in the house over. AS he gets closer your heart begins to race. He looks in the cabinet but finds nothing. " +
+                        "He moves on to the next room. You wait a minute and realize he isn't coming back. You get up and investigate the rest of the downstairs what room do you go into?"
+                        livingrooms()
+                    } else if(hideform.value == "upstairs"){
+                        upstairs()
+                    } else if(hideform.value == "don't hide"){
+                        donot()
+                    }
+                
                 })
     }
 
+    function kitchens(){
+
+    }
+    function livingrooms(){
+        first.append(main);
+        let livingform = document.createElement('INPUT');
+        livingform.setAttribute("type", "text");
+        first.appendChild(livingform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+        let livingbutton = document.createElement('INPUT');
+        livingbutton.setAttribute("type", "submit");
+        first.appendChild(livingbutton);
+        livingbutton.addEventListener('click', event => {
+            if(livingform.value == "livingroom"){
+                document.querySelector("main").innerHTML = "You decide to stay in the living room and see a family portrait with the name cross on the bottom. You recognize where the picture was taken and it was nates old house." +
+                 "You seem creeped out because nates last name was never cross." 
+            }
+                setTimeout(function(){
+                    document.querySelector("main").innerHTML = "After searching the living room you hear a slight ringing noise. You follow it and end up in a closet with a washer and dryer." +
+                    "You pick up the phone and you recognize it as your colleagues. When you answer you hear your assistant on the other end. She says you shouldn't have come here. I warned you not to investigate this place but you and your colleague bryan are too damn persistent" +
+                    "I am not sorry for what we did to bryan he deserved it but you don't have to meet the same fate. So leave us alone or die like bryan did. You hang up the phone but keep it on you just in case. You search around the room and find your notepad and your weapon" +
+                    "You walk into the hall and make you way to the front of the house slowly to avoid detection from the family. As you do you realize the front door is boarded shut." +
+                    "So you make your way to the garage and hear a banging sound on the garage door. You open it and an fbi agent comes storming in with his gun pointed at your face." +
+        "He asks you what are you doing here?"
+                    garage()
+                  }  , 12 * 1000);
+    })
     
-} 
+}
+    
+
+function upstairs(){
+}
+    function donot(){
+
+    }
+
+    function garage(){
+    garagebutton = document.createElement("BUTTON");
+                        garagebutton.innerHTML = "Tell the truth";
+                        first.appendChild(garagebutton);
+                        //garagebutton.id = "option1"
+                        
+                        garagebutton.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "My name is" + "&nbsp"+ text + "I work for an investigative company out of California" +
+                            "I was tasked with investigating the dissappearance of missing kids which one of them includes my son. I was at this other house and did find evidence of such dissappearance." +
+                            "As soon as i was about to get deeper into the mystery I got knocked out brought here. What are you doing here? THe agent acknowledges your story and says he is also here to investigate the children but they wouldn't let him in. He had his son go missing and is trying to find him. He asks why you were at the other house?" +
+                            "You say it's because my assistant who is actually behind all of this gave me the location. Before the agent has time to respond the garage door closes behind him and the door behind you also closes." +
+                            "Edward interrupts the conversation and asks now why in the hell did you let him in? I'm gonna have to kill you both now can't have you telling people what happened here. Edward sprints at you with full speed. Both you and the agent roll out of the way but end up on different sides of him."
+                            edward()
+                        })
+                        garagebutton2 = document.createElement("BUTTON");
+                            garagebutton2.innerHTML = "Lie";
+                            first.appendChild(garagebutton2);
+                            garagebutton2.id = "option10";
+                            garagebutton2.addEventListener('click', event => {
+                                document.querySelector("main").innerHTML = "My name is ethan and I am here to help this family renovate there house. The agent doesn't like your answer and points the gun at you and kills you"
+                                garage();
+    })
+    button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                        }
+
+                        function edward(){
+
+
+                            notes = document.createElement("BUTTON");
+                            notes.innerHTML = "notes";
+                            notes.id = "notes"
+                            first.appendChild(notes);
+                            restart = document.createElement("button");
+                            restart.innerHTML = "Restart";
+                            restart.id = "restart"
+                            first.appendChild(restart);
+                            restart.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                        }
+}
+
+ 
   </script> 
     </div>
     <div class = "notes">
