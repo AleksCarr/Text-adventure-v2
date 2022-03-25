@@ -22,15 +22,26 @@ document.querySelector('#game').textContent = '';
 
 document.querySelector('main').innerHTML ="Before we start this adventure please enter your name: "
 first.appendChild(main);
-</script>
-<form id = "frm1" name = "frm1"> <label for="name"></label>
-    <input type="text" autocomplete="off" id="fname" name="fname" required/>
-    <button type='submit' onclick="newfun()">
-        Submit
-    </button>
-    <button>Notes</button></form>
-    <script>
-    function newfun(){
+let nameform = document.createElement('INPUT');
+        nameform.setAttribute("type", "text");
+        nameform.id = "frm1";
+        first.appendChild(nameform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+        let namebutton = document.createElement('INPUT');
+        namebutton.setAttribute("type", "submit");
+        first.appendChild(namebutton);
+        namebutton.addEventListener('click', event => {
+            newfun()
+        })
+        function newfun() {
         var x = document.getElementById("frm1");
         var text = "";
         var i;
@@ -1260,10 +1271,10 @@ function camera1() {
                 document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.19e91f8b7cf17a4c4d949ec5da1da123?rik=WfVOOrwpIoowwQ&riu=http%3a%2f%2fwww.cheatsheet.com%2fwp-content%2fuploads%2f2017%2f05%2fcharlies-apartment.png&ehk=ku%2bHCkTKlc7QJZzdQmhYCJQ5WwrKoXIp%2bgcTOZxJuDI%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize="100% 100%";
                         document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
-                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + nameform.value + "&nbsp"+  "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
-                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + nameform.value + "&nbsp" + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                 "<br><br>You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs."
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
                 + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
@@ -1301,10 +1312,10 @@ function camera1() {
             document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.19e91f8b7cf17a4c4d949ec5da1da123?rik=WfVOOrwpIoowwQ&riu=http%3a%2f%2fwww.cheatsheet.com%2fwp-content%2fuploads%2f2017%2f05%2fcharlies-apartment.png&ehk=ku%2bHCkTKlc7QJZzdQmhYCJQ5WwrKoXIp%2bgcTOZxJuDI%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize="100% 100%";
             document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
-                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + nameform.value + "&nbsp"+ "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
-                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + nameform.value + "&nbsp"+ "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                 "What would you like to search next?"
                 first.append(main);
                 let room1form = document.createElement('INPUT');
@@ -1421,10 +1432,10 @@ function camera1() {
                         document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.19e91f8b7cf17a4c4d949ec5da1da123?rik=WfVOOrwpIoowwQ&riu=http%3a%2f%2fwww.cheatsheet.com%2fwp-content%2fuploads%2f2017%2f05%2fcharlies-apartment.png&ehk=ku%2bHCkTKlc7QJZzdQmhYCJQ5WwrKoXIp%2bgcTOZxJuDI%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize="100% 100%";
                         document.querySelector("main").innerHTML = "You investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
-                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
+                "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + nameform.value + "&nbsp"+ "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one"+
                 "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two"+
                 "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three"+
-                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + nameform.value + "&nbsp" + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                 "<br><br>You finally decide to search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes."
                 + "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate"
                 + "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"      
@@ -2702,7 +2713,7 @@ function upstairs(){
                             document.location.reload()
                         })
                         }
-}
+                    }
 
  
   </script> 
