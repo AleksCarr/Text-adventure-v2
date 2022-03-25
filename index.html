@@ -2676,7 +2676,8 @@ function upstairs(){
                             "I was tasked with investigating the dissappearance of missing kids which one of them includes my son. I was at this other house and did find evidence of such dissappearance." +
                             "As soon as i was about to get deeper into the mystery I got knocked out brought here. What are you doing here? THe agent acknowledges your story and says he is also here to investigate the children but they wouldn't let him in. He had his son go missing and is trying to find him. He asks why you were at the other house?" +
                             "You say it's because my assistant who is actually behind all of this gave me the location. Before the agent has time to respond the garage door closes behind him and the door behind you also closes." +
-                            "Edward interrupts the conversation and asks now why in the hell did you let him in? I'm gonna have to kill you both now can't have you telling people what happened here. Edward sprints at you with full speed. Both you and the agent roll out of the way but end up on different sides of him."
+                            "Edward interrupts the conversation and asks now why in the hell did you let him in? I'm gonna have to kill you both now can't have you telling people what happened here. Edward sprints at you with full speed. Both you and the agent roll out of the way but end up on different sides of him."+
+                            "Edward looks at you menacingly and charges at you at full speed"
                             edward()
                         })
                         garagebutton2 = document.createElement("BUTTON");
@@ -2700,20 +2701,82 @@ function upstairs(){
 
                         function edward(){
 
-
-                            notes = document.createElement("BUTTON");
-                            notes.innerHTML = "notes";
-                            notes.id = "notes"
-                            first.appendChild(notes);
-                            restart = document.createElement("button");
-                            restart.innerHTML = "Restart";
-                            restart.id = "restart"
-                            first.appendChild(restart);
-                            restart.addEventListener('click', event => {
-                            document.location.reload()
+                            let mytimeout =  setTimeout(function(){
+                                garage()
+                            }  , 10 * 1000)
+                            fightbutton4 = document.createElement("BUTTON");
+                            fightbutton4.innerHTML = "dodge";
+                            first.appendChild(fightbutton4);
+                            fightbutton4.addEventListener('click', event => {
+                                clearTimeout(mytimeout);
+                                document.querySelector("main").innerHTML = "You dodge but edward catches you"
+                                garage();
+                            })
+                            fightbutton1 = document.createElement("BUTTON");
+                            fightbutton1.innerHTML = "roll";
+                            first.appendChild(fightbutton1);
+                            fightbutton1.addEventListener('click', event => {
+                                document.querySelector("main").innerHTML = "You roll to the left and pick up an axe but see the agent already up what looks like a ladder. Edward is still chasing right after you."
+                                clearTimeout(mytimeout);
+                                let mytimeout1 = setTimeout(function(){
+                                garage()
+                            }  , 15 * 1000)
+                            fightbutton5 = document.createElement("BUTTON");
+                            fightbutton5.innerHTML = "dodge";
+                            first.appendChild(fightbutton5);
+                            fightbutton5.addEventListener('click', event => {
+                                clearTimeout(mytimeout1);
+                                document.querySelector("main").innerHTML = "You dodge but edward catches you"
+                                garage();
+                            })
+                            fightbutton6 = document.createElement("BUTTON");
+                            fightbutton6.innerHTML = "attack";
+                            first.appendChild(fightbutton6);
+                            fightbutton6.addEventListener('click', event => {
+                                clearTimeout(mytimeout1);
+                                document.querySelector("main").innerHTML = "You swing at him and it hits him but edward says you should've gone for the head and kills you with his own weapon."
+                                garage()
+                            })
+                            fightbutton2 = document.createElement("BUTTON");
+                            fightbutton2.innerHTML = "run";
+                            first.appendChild(fightbutton2);
+                            fightbutton2.addEventListener('click', event => {
+                                document.querySelector("main").innerHTML = "You run and run to the ladder that the agent has already climbed when you get up there edward is right on your trail."
+                                clearTimeout(mytimeout1);
+                                let mytimeout2 = setTimeout(function(){
+                                garage()
+                            }  , 15 * 1000)
+                            fightbutton7 = document.createElement("BUTTON");
+                            fightbutton7.innerHTML = "attack";
+                            first.appendChild(fightbutton7);
+                            fightbutton7.addEventListener('click', event => {
+                                clearTimeout(mytimeout2);
+                                document.querySelector("main").innerHTML = "You swing at him and before you can even make contact with him he catches your arm and kills you."
+                                garage()
+                            })
+                                fightbutton3 = document.createElement("BUTTON");
+                            fightbutton3.innerHTML = "chop";
+                            first.appendChild(fightbutton3);
+                            fightbutton3.addEventListener('click', event => {
+                                clearTimeout(mytimeout2);
+                                document.querySelector("main").innerHTML = "You chop at edward and his head comes clean off. You hear a thud as his body hits the floor. Both you and the agent look down but realize the body is no where to be seen. The agent says good job but still needs some clarification as to what the hell is happening"
+                                agent()
+                         })
                         })
-                        }
+                        })
                     }
+                    function agent(){
+                        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                    })
+                    }
+                }
 
  
   </script> 
