@@ -919,7 +919,7 @@ function camera1() {
         })
         }
     })
-}
+        }
 
         function email() {
             document.body.style.backgroundImage = "url('https://ak1.ostkcdn.com/wp-content/uploads/2017/06/Information-about-unlocked-cell-phones.jpeg')"
@@ -2513,8 +2513,8 @@ function camera1() {
         document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.5d9750975439eec8948d92f03318e26a?rik=ad88o3pk273nDQ&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1108136%2fthumbs%2fa-ABANDONED-FARMHOUSE-640x468.jpg%3f4&ehk=QZ3f0ny%2fEMWYElk6bV1LnDMEG941%2b5h4eCrzh1HijRY%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize="100% 100%";
         setTimeout(function(){
-    document.querySelector("main").innerHTML = "after five minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. THey go away and now's your chance to run away." +
-    "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you brak your chair and run back quickly. Now's your chance to hide where will you hide?"
+    document.querySelector("main").innerHTML = "after five minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." +
+    "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you break your chair and run back quickly. Now's your chance to hide where will you hide?"
     hide(); 
 }, 30 * 1000); // time in milliseconds
         document.querySelector("main").innerHTML = "You look around and realize you don't have any of your things. No one of the family is talking so you sit there until you decide to say something. What do you say?"
@@ -2605,24 +2605,103 @@ function camera1() {
                 first.appendChild(hidebutton);
                 hidebutton.addEventListener('click', event => { 
                     if(hideform.value == "kitchen"){
+                        document.querySelector("main").innerHTML = "You decide to hide in the kitchen. You go to the kitchen and barely see any hiding spots. You decide to hide in one of the cupboards."
+                        +"When the cross family comes back they see you are gone and begin investigating. Edward stays on the first floor and begins talking to himself. He says how dare he escape we weren't gonna kill him we had a lunch prepared for him. It wasn't even any of those annoying kids in the house over. He gets further away and investigates the living room. He doesn't find you since you are in the kitchen" +
+                        "You hear him leave and he goes into the hallway complaining. You wait a minute and realize he isn't coming back. You get up and investigate the rest of the downstairs what room do you go into?"
                         kitchens()
                     } else if(hideform.value == "living room"){
                         document.querySelector("main").innerHTML = "You decide to hide in the living room. You go into the living room and see a fancy couch, a cabinet and a old grandfather clock. You try to hide in the cabinet but realize this is too suspicious and that they will definitely look there. Your only other choice is to hide under the couch. So you do that."
                         +"When the cross family comes back they see you are gone and begin investigating. Edward stays on the first floor and begins talking to himself. He says how dare he escape we weren't gonna kill him we had a lunch prepared for him. It wasn't even any of those annoying kids in the house over. AS he gets closer your heart begins to race. He looks in the cabinet but finds nothing. " +
-                        "He moves on to the next room. You wait a minute and realize he isn't coming back. You get up and investigate the rest of the downstairs what room do you go into?"
+                        "You hear him leave and he goes into the hallway complaining. You wait a minute and realize he isn't coming back. You get up and investigate the rest of the downstairs what room do you go into?"
                         livingrooms()
-                    } else if(hideform.value == "upstairs"){
-                        upstairs()
-                    } else if(hideform.value == "don't hide"){
-                        donot()
-                    }
+                    } else if(hideform.value == "bedroom"){
+                        document.querySelector("main").innerHTML = "You decide to hide in the bedrrom. You go into the bedrrom and it looks like an adult bedroom. You look around and think under the bed is too obvious. So you become creative and hop on the window sail and hide behind the curtain."
+                        +"When the cross family comes back they see you are gone and begin investigating. Edward stays on the first floor and begins talking to himself. He says how dare he escape we weren't gonna kill him we had a lunch prepared for him. It wasn't even any of those annoying kids in the house over. He gets further away and investigates the living room. He doesn't find you since you are in the kitchen" +
+                        "You hear him leave and he goes into the hallway complaining. You wait a minute and realize he isn't coming back. You get up and investigate the rest of the downstairs what room do you go into?"
+                        bedroom()
+                    } 
                 
                 })
     }
 
     function kitchens(){
+        first.append(main);
+        let kitchensform = document.createElement('INPUT');
+        kitchensform.setAttribute("type", "text");
+        first.appendChild(kitchensform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+        let kitchensbutton = document.createElement('INPUT');
+        kitchensbutton.setAttribute("type", "submit");
+        first.appendChild(kitchensbutton);
+        kitchensbutton.addEventListener('click', event => {
+            if(kitchensform.value == "livingroom"){
+                document.querySelector("main").innerHTML = "You decide to search in the living room and see a family portrait with the name cross on the bottom. You recognize where the picture was taken and it was nates old house." +
+                 "You seem creeped out because nates last name was never cross." 
+            } else if (kitchensform.value == "kitchen"){
+                document.querySelector("main").innerHTML = "You decide to stay in the kitchen and see a variety of kitchen utensils. You continue searching but find nothing of significance."
+            }
+                setTimeout(function(){
+                    document.querySelector("main").innerHTML = "After searching the living room you hear a slight ringing noise. You follow it and end up in a closet with a washer and dryer." +
+                    "You pick up the phone and you recognize it as your colleagues. When you answer you hear your assistant on the other end. She says you shouldn't have come here. I warned you not to investigate this place but you and your colleague bryan are too damn persistent" +
+                    "I am not sorry for what we did to bryan he deserved it but you don't have to meet the same fate. So leave us alone or die like bryan did. You hang up the phone but keep it on you just in case. You search around the room and find your notepad and your weapon." +
+                    "You walk into the hall and make you way to the front of the house slowly to avoid detection from the family. As you do you realize the front door is boarded shut." +
+                    "So you make your way to the garage and hear a banging sound on the garage door. You open it and an fbi agent comes storming in with his gun pointed at your face." +
+        "He asks you what are you doing here?"
+                    garage()
+                  }  , 12 * 1000);
+    })
+    
+}
 
-    }
+function bedroom(){
+    first.append(main);
+        let bedroomform = document.createElement('INPUT');
+        bedroomform.setAttribute("type", "text");
+        first.appendChild(bedroomform)
+        button = document.createElement("BUTTON");
+        button.innerHTML = "notes";
+        first.appendChild(button);
+        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+        let bedroombutton = document.createElement('INPUT');
+        bedroombutton.setAttribute("type", "submit");
+        first.appendChild(bedroombutton);
+        bedrrombutton.addEventListener('click', event => {
+            if(bedroomform.value == "livingroom"){
+                document.querySelector("main").innerHTML = "You decide to search in the living room and see a family portrait with the name cross on the bottom. You recognize where the picture was taken and it was nates old house." +
+                 "You seem creeped out because nates last name was never cross." 
+            }  else if (bedroomform.value == "kitchen"){
+                document.querySelector("main").innerHTML = "You decide to search in the kitchen and see a variety of kitchen utensils. You continue searching but find nothing of significance."
+            } else if (bedroomform.value == "bedroom"){
+                document.querySelector("main").innerHTML = "You decide to stay in the bedrrom. You search the bedroom and see 1900 clothes. Which is weird since it's 2022. You search more and find a notebook. It reads she is making us do this i'm sorry bryan."
+            }
+                setTimeout(function(){
+                    document.querySelector("main").innerHTML = "After searching the living room you hear a slight ringing noise. You follow it and end up in a closet with a washer and dryer." +
+                    "You pick up the phone and you recognize it as your colleagues. When you answer you hear your assistant on the other end. She says you shouldn't have come here. I warned you not to investigate this place but you and your colleague bryan are too damn persistent" +
+                    "I am not sorry for what we did to bryan he deserved it but you don't have to meet the same fate. So leave us alone or die like bryan did. You hang up the phone but keep it on you just in case. You search around the room and find your notepad and your weapon" +
+                    "You walk into the hall and make you way to the front of the house slowly to avoid detection from the family. As you do you realize the front door is boarded shut." +
+                    "So you make your way to the garage and hear a banging sound on the garage door. You open it and an fbi agent comes storming in with his gun pointed at your face." +
+        "He asks you what are you doing here?"
+                    garage()
+                  }  , 12 * 1000);
+    })
+    
+}
+
+
+
     function livingrooms(){
         first.append(main);
         let livingform = document.createElement('INPUT');
@@ -2644,6 +2723,10 @@ function camera1() {
             if(livingform.value == "livingroom"){
                 document.querySelector("main").innerHTML = "You decide to stay in the living room and see a family portrait with the name cross on the bottom. You recognize where the picture was taken and it was nates old house." +
                  "You seem creeped out because nates last name was never cross." 
+            }  else if (livingform.value == "kitchen"){
+                document.querySelector("main").innerHTML = "You decide to search in the kitchen and see a variety of kitchen utensils. You continue searching but find nothing of significance."
+            } else if (livingform.value == "bedroom"){
+                document.querySelector("main").innerHTML = "You decide to search in the bedrrom. You search the bedroom and see 1900 clothes. Which is weird since it's 2022. You search more and find a notebook. It reads she is making us do this i'm sorry bryan."
             }
                 setTimeout(function(){
                     document.querySelector("main").innerHTML = "After searching the living room you hear a slight ringing noise. You follow it and end up in a closet with a washer and dryer." +
@@ -2657,13 +2740,6 @@ function camera1() {
     })
     
 }
-    
-
-function upstairs(){
-}
-    function donot(){
-
-    }
 
     function garage(){
     garagebutton = document.createElement("BUTTON");
