@@ -2844,6 +2844,7 @@
                     }
 
                     function agent() {
+                        
                         first.append(main);
                        
                         agentbutton3 = document.createElement("BUTTON");
@@ -2962,14 +2963,13 @@
                             if (randomroomform.value == "yes") {
                                 tape();
                     }
-                    else if(room.value == "no"){
+                    else if(randomroomform.value == "no"){
                         next();
                     }
 
                 })
             }
-
-                function tape() {
+            function tape() {
                     document.querySelector("main").innerHTML = "You decide to play the video. It shows bryan still alive and getting up from what seemed like the basement of the old house after getting attacked from something. He says it looked like a sludgy monster. You watch as bryan explores the house like you did but you realize some things are different it isn't as run down as what you saw. You watch as Bryan goes ito the attic and falls into a tunnel looking thing."+
                     "He proceeds to trave through the tunnel and reaches the house you are in now. He explores a bit and makes his way into the room you are in now. He continues into the nextroom and see a unsolved rubiks cube with a spotlight onit. He says to himself wow this solve is easy only takes seven turns. Apparently he is a master at solving rubiks cube. You watch as he carefully does his solve. He turns it right then up then left then right then down then left then right. As he finishes the last turn he sets it back on the podium fully solved. " +
                     "It opens up a secret passageway that can only fit one person at a time but the video ends here. Once the video is over you and the agent run towards the other room and see the same rubiks cube with the same pattern which must mean it has the same solve. How do you solve it" +
@@ -2992,12 +2992,41 @@
                         puzzlebutton.setAttribute("type", "submit");
                         first.appendChild(puzzlebutton);
                         puzzlebutton.addEventListener('click', event => {
-                            if(puzzleform.value = "RULRDLR"){
+                            if(puzzleform.value == "RULRDLR"){
                                 passage()
+                            } 
+                            else if (puzzleform.value != "RULRDLR"){
+                                document.querySelector("main").innerHTML = "You have died please try again"
+                                tape()
                             }
-                            else if(puzzleform.value != "RULRDLR"){
-                                document.querySelector("main").innerHTML = "That's wrong you died";
-                                tape();
+                           
+                })
+            }
+            function next() {
+                document.querySelector("main").innerHTML = "You decide not to watch the video but go onto the next room and see a unsolved rubiks cube and to proceed looks like you will have to solve it. What ays to do turn it.Hint enter like LRUD for left right up or down";
+                    first.append(main);
+                    let puzzleform1 = document.createElement('INPUT');
+                        puzzleform1.setAttribute("type", "text");
+                        first.appendChild(puzzleform1)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+
+                        let puzzlebutton1 = document.createElement('INPUT');
+                        puzzlebutton1.setAttribute("type", "submit");
+                        first.appendChild(puzzlebutton1);
+                        puzzlebutton1.addEventListener('click', event => {
+                            if(puzzleform1.value == "RULRDLR"){
+                                passage()
+                            } else if (puzzleform1.value != "RULRDLR"){
+                                document.querySelector("main").innerHTML = "You have died please try again"
+                                next()
                             }
                 })
             }
