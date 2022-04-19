@@ -82,7 +82,7 @@
                     function chapter0() {
                         document.body.style.backgroundImage = "url('https://live.staticflickr.com/4106/5176749878_ae9f6b2866.jpg')"
                         document.body.style.backgroundSize = "100% 100%";
-                        document.querySelector("main").innerHTML = "Welcome" + "&nbsp" + text + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +
+                        document.querySelector("main").innerHTML = "Welcome" + "&nbsp" + nameform.value + "&nbsp" + "You are an investigative journalist who is on an assignment to search for clues of 5 missing kids. \n What you are really after is your son Thomas who went missing 5 years ago. \n He went missing after returning from summer camp and is presumed dead.\n His summer camp was at Tillamook forest in Oregon" +
                             "&nbsp" + "Your assistant gave you directions to a possible lead that is 20 miles east of the forest" +
                             "&nbsp" + "The date is August 5th 2020 and is approximately 12:00 pm." +
                             " &nbsp" + "You decide to go straight from your car and end up in a crossroad do you go straight, go left, or go right?</br></br></br>" +
@@ -1236,10 +1236,10 @@
                                 document.body.style.backgroundSize = "100% 100%";
                                 document.querySelector("main").innerHTML = "You decide to go to the attic and once up there you see that it is really run down but you squeeze your way in between broken beams and see another cage but this one looks like a dog cage and inside it is the name of Nates old dog. Attic added to notes. You decide there is nothing left to search in the attic and head downstairs." +
                                     "You finally investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
-                                    "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one" +
+                                    "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + nameform.value + "&nbsp" + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one" +
                                     "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two" +
                                     "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three" +
-                                    "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                                    "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + nameform.value + "&nbsp" + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                                     "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate" +
                                     "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                                 first.append(main);
@@ -1472,10 +1472,10 @@
                                 document.body.style.backgroundSize = "100% 100%";
                                 document.querySelector("main").innerHTML = "you search the kitchen and notice that it is unusually warm unlike the rest of the house. So someone was recently here and are on the lookout. Kitchen added to notes." +
                                     "You finally investigate the living room and see a set of old cassettes tapes on a table labeled play me and there are four of them" +
-                                    "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + text + "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one" +
+                                    "<br><br>You play the tapes in order and you play the first tape. The first tape starts with your friend nate sitting on a couch and he says i'm sorry" + "&nbsp" + nameform.value + "&nbsp"+ "I know you are watching this please hear me out. I've been hearing voices in my head. End of tape one" +
                                     "<br><br>You play the second one shows Nate on the couch. He says the voice in his head keeps telling him to go to Tillamook forest and kidnap people. He has tried to resist but it is too much and he went along with the voice in his head. End of tape two" +
                                     "<br><br>You play the third one and it appears that several hours have passed. It looks like his mental state has deteriorating. He says after he stole a kid from the camp he has been tasked with building holding cells. They are located in the basement behind a locked door. End of tape three" +
-                                    "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + text + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
+                                    "<br><br>You play the final tape but this time when nate talks he sounds different but he only says a few words that are" + "&nbsp" + nameform.value + "&nbsp" + "Run. Then the tape shuts off. The creepy cassette tapes are added to notes" +
                                     "<br><br>You search everywhere and decide to go back to the entry way. When you get there you get knocked out by a mysterious figure. When you wake up you are chained to a chair and seated across from a weird looking family in a weird looking house. You dont recognize the house, but you do recognize one of the family members... Nate" +
                                     "<br><br>End of Prolouge(It will get more difficult the text won't give you suggestions on what to do.) Are you ready?"
                                 first.append(main);
@@ -2512,83 +2512,93 @@
                     function chapter1() {
                         document.body.style.backgroundImage = "url('https://th.bing.com/th/id/R.5d9750975439eec8948d92f03318e26a?rik=ad88o3pk273nDQ&riu=http%3a%2f%2fi.huffpost.com%2fgen%2f1108136%2fthumbs%2fa-ABANDONED-FARMHOUSE-640x468.jpg%3f4&ehk=QZ3f0ny%2fEMWYElk6bV1LnDMEG941%2b5h4eCrzh1HijRY%3d&risl=&pid=ImgRaw&r=0')"
                         document.body.style.backgroundSize = "100% 100%";
-                        setTimeout(function() {
-                            document.querySelector("main").innerHTML = "after five minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." +
+                        const alarm = setTimeout(function() {
+                            document.querySelector("main").innerHTML = "after two minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." +
                                 "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you break your chair and run back quickly. Now's your chance to hide where will you hide?"
                             hide();
                         }, 30 * 1000); // time in milliseconds
-                        document.querySelector("main").innerHTML = "You look around and realize you don't have any of your things. No one of the family is talking so you sit there until you decide to say something. What do you say?"
-                        button1 = document.createElement("BUTTON");
-                        button1.innerHTML = "Why am I here?";
-                        first.appendChild(button1);
-                        button1.id = "option1"
-                        button1.addEventListener('click', event => {
-                            document.querySelector("main").innerHTML = "No one speaks for about 30 seconds then the older gentlemen introduces himself as Edward Cross. He responds to your question by saying: " +
-                                "You are here to be our main course at 5:00 pm which is 4 hours away so don't go anywhere we don't want to have to kill you before it is time. You decide to ask another question: "
-                            button1.innerHTML = "Why am I here?";
-                            first.appendChild(button1);
-                            button1.id = "option5"
-                            button2 = document.createElement("BUTTON");
-                            button2.innerHTML = "Nate?";
-                            first.appendChild(button2);
-                            button2.id = "option6"
-                            button3 = document.createElement("BUTTON");
-                            button3.innerHTML = "Why am I chained up like this?";
-                            first.appendChild(button3);
-                            button3.id = "option7"
-                            button4 = document.createElement("BUTTON");
-                            button4.innerHTML = "Say nothing";
-                            first.appendChild(button4);
-                            button4.id = "option8"
-                            notes = document.createElement("BUTTON");
-                            notes.innerHTML = "notes";
-                            notes.id = "notes"
-                            first.appendChild(notes);
-                            restart = document.createElement("button");
-                            restart.innerHTML = "Restart";
-                            restart.id = "restart"
-                            first.appendChild(restart);
-                            restart.addEventListener('click', event => {
-                                document.location.reload()
-                            })
+                        //truth route
+                        document.querySelector("main").innerHTML = "You look around and realize you don't have any of your things. No one of the family is talking they just stare at you for a bit till the older gentleman say what are you doing here?"
+                        first.append(main);
+                        talkbutton1 = document.createElement("BUTTON");
+                        talkbutton1.innerHTML = "tell the truth";
+                        first.appendChild(talkbutton1);
+                        talkbutton1.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the older guy that you are an investigative journalist looking for 5 missing kids that supposedly went missing near this area." +
+                            "The older guy responds and says he has no idea about any kids but to stay put in the chair you are in or else he will have to kill you which he doesn't want to do."
+                            talkbutton2 = document.createElement("BUTTON");
+                        talkbutton2.innerHTML = "what will you do to me?";
+                        first.append(main);
+                        first.appendChild(talkbutton2);
+                        talkbutton2.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "The older guy says it's pretty simple we are gonna have you for dinner in about 4 hours from now."
+
+                    })
+
+                    talkbutton3 = document.createElement("BUTTON");
+                        talkbutton3.innerHTML = "How long will I be here?";
+                        first.appendChild(talkbutton3);
+                        talkbutton3.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "The older guy responds by saying you will be here for at least 4 hours as we prepare you to be our dinner"
+                            
+                    })
+                    talkbutton4 = document.createElement("BUTTON");
+                        talkbutton4.innerHTML = "You can't treat people like this?";
+                        first.appendChild(talkbutton4);
+                        talkbutton4.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "The older guy says he can treat people however he wants since this is his house and no one including the police will stop him"
+
+                       
+                    })
+                    talkbutton5 = document.createElement("BUTTON");
+                        talkbutton5.innerHTML = "Say nothing";
+                        first.appendChild(talkbutton5);
+                        talkbutton5.addEventListener('click', event => {
+                            clearTimeout(alarm); 
+                
+                            document.querySelector("main").innerHTML = "You decide to say nothing. THe older guy responds by saying good don't answer me yet we will just have to torture you after we have lunch to find the truth." +
+                            "After two minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." +
+                                "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you break your chair and run back quickly. Now's your chance to hide where will you hide?"
+                            hide();
+                    })
+                })
+                //lie route
+                talkbutton6 = document.createElement("BUTTON");
+                        talkbutton6.innerHTML = "lie";
+                        first.appendChild(talkbutton6);
+                        talkbutton6.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the older guy that you were here looking aorund at houses to see if any are available to buy. I want to find a nice scenic house for the summer. The older guy doesn't believe you he asks why you had weapons and were trespassing by actually going inot the house?"
+
+            })
+            //Don't remember route
+            talkbutton7 = document.createElement("BUTTON");
+                        talkbutton7.innerHTML = "Don't remember";
+                        first.appendChild(talkbutton7);
+                        talkbutton7.addEventListener('click', event => {
+                            clearTimeout(alarm); 
+                            document.querySelector("main").innerHTML = "You tell the older guy that you don't remember much all you do remember is coming to this property for some reason but as soon as you set foot you blacked out and woke up chained up. The older guy informs you that you were trespassing at his other house but if you don't remember anything we can't really ask you anything." 
+                            + "After two minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." 
+                               + "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you break your chair and run back quickly. Now's your chance to hide where will you hide?"
+                            hide();
                         })
-
-
-
-
-                        button2 = document.createElement("BUTTON");
-                        button2.innerHTML = "Nate?";
-                        first.appendChild(button2);
-                        button2.id = "option2"
-                        button3 = document.createElement("BUTTON");
-                        button3.innerHTML = "Why am I chained up like this?";
-                        first.appendChild(button3);
-                        button3.id = "option3"
-                        button4 = document.createElement("BUTTON");
-                        button4.innerHTML = "Say nothing";
-                        first.appendChild(button4);
-                        button4.id = "option4"
-                        notes = document.createElement("BUTTON");
-                        notes.innerHTML = "notes";
-                        notes.id = "notes"
-                        first.appendChild(notes);
-                        restart = document.createElement("button");
-                        restart.innerHTML = "Restart";
-                        restart.id = "restart"
-                        first.appendChild(restart);
-                        restart.addEventListener('click', event => {
-                            document.location.reload()
-                        })
-
-                    }
-
+                        //say nothing route
+                        talkbutton8 = document.createElement("BUTTON");
+                        talkbutton8.innerHTML = "Say nothing";
+                        first.appendChild(talkbutton8);
+                        talkbutton8.addEventListener('click', event => {
+                            clearTimeout(alarm); 
+                
+                document.querySelector("main").innerHTML = "You decide to say nothing. THe older guy responds by saying good don't answer me yet we will just have to torture you after we have lunch to find the truth." 
+                + "After two minutes of talking with edward while the others stare at you the mom yells its time for lunch. You fear for your life thinking they are gonna feed you a kid. They go away and now's your chance to run away." 
+                  +  "You try your hardest and finally you pick the whole chair up and smash it on the ground. The family hears you break your chair and run back quickly. Now's your chance to hide where will you hide?"
+                hide();
+        })
+    }
                     function hide() {
+                        first.append(main);
                         let hideform = document.createElement('INPUT');
                         hideform.setAttribute("type", "text");
                         first.appendChild(hideform)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -2624,9 +2634,6 @@
                         let kitchensform = document.createElement('INPUT');
                         kitchensform.setAttribute("type", "text");
                         first.appendChild(kitchensform)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -2661,9 +2668,6 @@
                         let bedroomform = document.createElement('INPUT');
                         bedroomform.setAttribute("type", "text");
                         first.appendChild(bedroomform)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -2702,9 +2706,6 @@
                         let livingform = document.createElement('INPUT');
                         livingform.setAttribute("type", "text");
                         first.appendChild(livingform)
-                        button = document.createElement("BUTTON");
-                        button.innerHTML = "notes";
-                        first.appendChild(button);
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
@@ -2737,13 +2738,14 @@
                     }
 
                     function garage() {
+                        first.append(main);
                         garagebutton = document.createElement("BUTTON");
                         garagebutton.innerHTML = "Tell the truth";
                         first.appendChild(garagebutton);
                         //garagebutton.id = "option1"
 
                         garagebutton.addEventListener('click', event => {
-                            document.querySelector("main").innerHTML = "My name is" + "&nbsp" + text + "I work for an investigative company out of California" +
+                            document.querySelector("main").innerHTML = "My name is" + "&nbsp" + nameform.value + "&nbsp"  + "I work for an investigative company out of California" +
                                 "I was tasked with investigating the dissappearance of missing kids which one of them includes my son. I was at this other house and did find evidence of such dissappearance." +
                                 "As soon as i was about to get deeper into the mystery I got knocked out brought here. What are you doing here? THe agent acknowledges your story and says he is also here to investigate the children but they wouldn't let him in. He had his son go missing and is trying to find him. He asks why you were at the other house?" +
                                 "You say it's because my assistant who is actually behind all of this gave me the location. Before the agent has time to respond the garage door closes behind him and the door behind you also closes." +
@@ -2765,7 +2767,7 @@
                         button1 = document.createElement("button");
                         button1.innerHTML = "Restart";
                         first.appendChild(button1);
-                        button1.addEventListener('click', event => {
+                        buooitton1.addEventListener('click', event => {
                             document.location.reload()
                         })
                     }
@@ -2775,6 +2777,7 @@
                         let mytimeout = setTimeout(function() {
                             garage()
                         }, 10 * 1000)
+                        first.append(main);
                         fightbutton4 = document.createElement("BUTTON");
                         fightbutton4.innerHTML = "dodge";
                         first.appendChild(fightbutton4);
@@ -2792,6 +2795,7 @@
                             let mytimeout1 = setTimeout(function() {
                                 garage()
                             }, 15 * 1000)
+                            first.append(main);
                             fightbutton5 = document.createElement("BUTTON");
                             fightbutton5.innerHTML = "dodge";
                             first.appendChild(fightbutton5);
@@ -2817,6 +2821,7 @@
                                 let mytimeout2 = setTimeout(function() {
                                     garage()
                                 }, 15 * 1000)
+                                first.append(main);
                                 fightbutton7 = document.createElement("BUTTON");
                                 fightbutton7.innerHTML = "attack";
                                 first.appendChild(fightbutton7);
@@ -2830,7 +2835,8 @@
                                 first.appendChild(fightbutton3);
                                 fightbutton3.addEventListener('click', event => {
                                     clearTimeout(mytimeout2);
-                                    document.querySelector("main").innerHTML = "You chop at edward and his head comes clean off. You hear a thud as his body hits the floor. Both you and the agent look down but realize the body is no where to be seen. The agent says good job but still needs some clarification as to what the hell is happening"
+                                    document.querySelector("main").innerHTML = "You chop at edward and his head comes clean off. You hear a thud as his body hits the floor. Both you and the agent look down but realize the body is no where to be seen. The agent says good job but still needs some clarification as to what the hell is happening. He inform you that he was sent around here to investigate this family but didn't have search warrant so he was hoping they would let him in." +
+                                    "But they didn't and couldn't find any other ways to get in without them noticing. Since all the entrances are boarded shut. He then asks how did you get inside this house? "
                                     agent()
                                 })
                             })
@@ -2838,6 +2844,25 @@
                     }
 
                     function agent() {
+                        first.append(main);
+                       
+                        agentbutton3 = document.createElement("BUTTON");
+                        agentbutton3.innerHTML = "knocked-out";
+                        first.appendChild(agentbutton3);
+                        agentbutton3.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the agent that the last thing you remember before ending up at this house was investigating a different house about some missing kids and investigated the whole house and found nothing. Then I don't remeber anything else after that."
+                            + "You inform the agent that edward said the kids are in the other house but doesn't make sense since you were just there. The agent asks if you have anymore intel and you inform him of how your agent orchastrated the whole thing. He asks how did she orchastrate the whole thing? "
+                            agent2()
+                        })
+                        agentbutton = document.createElement("BUTTON");
+                        agentbutton.innerHTML = "don't remeber";
+                        first.appendChild(agentbutton);
+                        agentbutton.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the agent I was investigating some other house that my assistant told me my son might be at. What I didn't know at the time was that house used to belong to my friend nate who went missing 10 years ago." +
+                            "Also what I didn't know at the time was that my assistant orchestrated the whole thing. She is the one behind the kidnapping of kids and the death of my colleague who went missing 5 years ago. He was doing what I am doing now and was serching for the missing kids. I was searching the house and got done then got knocked out by what I believe was edward."+
+                            "and ended up at this house. The agent understands all you are saying but he is a little skeptical as to what you mean by your assistant orchestrated the whole thing."
+                            agent2()
+                        })
                         button = document.createElement("BUTTON");
                         button.innerHTML = "notes";
                         first.appendChild(button);
@@ -2848,7 +2873,199 @@
                             document.location.reload()
                         })
                     }
-                }
+
+                        function agent2() {
+                            first.append(main);
+                        
+                        agentbutton1 = document.createElement("BUTTON");
+                        agentbutton1.innerHTML = "bryan";
+                        first.appendChild(agentbutton1);
+                        agentbutton1.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the agent how your colleague named bryan also had the same assistant and got sent to this same location to investigate the missing kids. Bryan went missing 5 years ago but when I went to the other house I found his phone with a video of what I assume is him dying. You show the video to the agent." +
+                            "He says that doesn't look good. You continue on saying that you got a call from this same phone and your assistant explained to you that she killed bryan and doesn't want to kill you but will if you stay here any longer. The agent doesn't know what to say" +
+                            "He finally speaks up and asks what was bryans last name? You inform the agent that it was starr."
+                            backstory()
+                        }) 
+                        agentbutton2 = document.createElement("BUTTON");
+                        agentbutton2.innerHTML = "talk";
+                        first.appendChild(agentbutton2);
+                        agentbutton2.addEventListener('click', event => {
+                            document.querySelector("main").innerHTML = "You tell the agent you got a call from your assistant from your old colleagues phone that somehow ened up here. Your assistant informs you of what happened to bryan and how she killed him and how she doesn't want it to happen to you so leave before we have to do something bad to you." +
+                            "The agent doesn't know what to think but finally asks what is bryans last name. You inform him that it is starr."
+                            backstory()
+                        }) 
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                    }
+                    function backstory() {
+                        first.append(main);
+                        
+                        backstorybutton = document.createElement("BUTTON");
+                        backstorybutton.innerHTML = "Why?";
+                        first.appendChild(backstorybutton);
+                        backstorybutton.addEventListener('click', event => {
+                            backstory1()
+                        }) 
+                        backstorybutton1 = document.createElement("BUTTON");
+                        backstorybutton1.innerHTML = "What?";
+                        first.appendChild(backstorybutton1);
+                        backstorybutton1.addEventListener('click', event => {
+                            backstory1()
+                        })
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                    }
+
+                    function backstory1() {
+                        document.querySelector("main").innerHTML = "The agent informs you that Bryan Starr was his best friends name. He didn't realize that this was where he went missing at. " +
+                        "But you have your timetables all wrong he didn't go missing 5 years ago because last year around this time the agent got a call from Bryan to meet him outside of tillamook forest. When he got there bryan never showed up. The agent thought it was a prank since bryan used to do this all the time and decided to go home and not think about it." +
+                        "The agent says that was the last time I heard from bryan so maybe he might still be alive just hiding out somewhere that the assistant doesn't know about." +
+                        "You both decide to work together to find bryan and the missing kids. The agent says we should try to escape and go to the first house you were at. You search the garage a bit and see a red card on a table that looks like it would go into a card reader to unlock something." +
+                        "You head towards an exit but no card reader so you go the oppposite direction and see a card reader with red labeled on it. You use the key and open up a whole new section of the house." +
+                        "You look around and see two sets of marble stairs that leads up, a pathway straight ahead that seems to go nowhere all that is in it is a rubkis cube unsolved. A statue at the south end of the room that is closed behind unbreakable glass that is holding another keycard and another exit that needs what looks like a red a blue and a green keycard." +
+                        "You already see the blue keycard behind the unbreakable glass. You inform the agent of all the things you see but before you can finish you hear someone grunt and an axe barely misses your head." +
+                        "You realize that is it edward he says god damn why did you chop my head off that fucking hurt. You both deicd eit's best if you run upstairs and avoid him at all cost because that last time you fought him you barely made it out alive."+
+                        "When you both make it upstairs edward just stares at you and begins patrolling the downstairs area. You see a bunch of rooms but are all boarded up or need a special key to open. You go into the singular room that you can go into." +
+                        "You search around the room but see nothing of significance except another phone and has a video that is labeled play me" + "&nbsp" + nameform.value + "&nbsp" + "Will you play the mysterious phones video?"
+                        first.append(main);
+                        let randomroomform = document.createElement('INPUT');
+                        randomroomform.setAttribute("type", "text");
+                        first.appendChild(randomroomform)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+
+                        let randomroombutton = document.createElement('INPUT');
+                        randomroombutton.setAttribute("type", "submit");
+                        first.appendChild(randomroombutton);
+                        randomroombutton.addEventListener('click', event => {
+                            if (randomroomform.value == "yes") {
+                                tape();
+                    }
+                    else if(room.value == "no"){
+                        next();
+                    }
+
+                })
+            }
+
+                function tape() {
+                    document.querySelector("main").innerHTML = "You decide to play the video. It shows bryan still alive and getting up from what seemed like the basement of the old house after getting attacked from something. He says it looked like a sludgy monster. You watch as bryan explores the house like you did but you realize some things are different it isn't as run down as what you saw. You watch as Bryan goes ito the attic and falls into a tunnel looking thing."+
+                    "He proceeds to trave through the tunnel and reaches the house you are in now. He explores a bit and makes his way into the room you are in now. He continues into the nextroom and see a unsolved rubiks cube with a spotlight onit. He says to himself wow this solve is easy only takes seven turns. Apparently he is a master at solving rubiks cube. You watch as he carefully does his solve. He turns it right then up then left then right then down then left then right. As he finishes the last turn he sets it back on the podium fully solved. " +
+                    "It opens up a secret passageway that can only fit one person at a time but the video ends here. Once the video is over you and the agent run towards the other room and see the same rubiks cube with the same pattern which must mean it has the same solve. How do you solve it" +
+                    "Hint enter like LRUD for left right up or down";
+                    first.append(main);
+                    let puzzleform = document.createElement('INPUT');
+                        puzzleform.setAttribute("type", "text");
+                        first.appendChild(puzzleform)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+
+                        let puzzlebutton = document.createElement('INPUT');
+                        puzzlebutton.setAttribute("type", "submit");
+                        first.appendChild(puzzlebutton);
+                        puzzlebutton.addEventListener('click', event => {
+                            if(puzzleform.value = "RULRDLR"){
+                                passage()
+                            }
+                            else if(puzzleform.value != "RULRDLR"){
+                                document.querySelector("main").innerHTML = "That's wrong you died";
+                                tape();
+                            }
+                })
+            }
+            function passage() {
+                document.querySelector("main").innerHTML = "Once you solve the puzzle and put it down on the pedastal the secret passageway opens. Again loooks tiny so you have to go one at a time." + 
+                "The agent tells you to go first so you do. The agent tries to tell you something but you hear a scream and the agent gets knocked out and carried to who knows where. As you reach the other side there is no sign of the agent so you continue without him." +
+                "You enter what looks like a billiard room. You decide to look around, what do you search?"
+                first.append(main);    
+                let puzzleform = document.createElement('INPUT');
+                        puzzleform.setAttribute("type", "text");
+                        first.appendChild(puzzleform)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                        let puzzlebutton = document.createElement('INPUT');
+                        puzzlebutton.setAttribute("type", "submit");
+                        first.appendChild(puzzlebutton);
+                        puzzlebutton.addEventListener('click', event => {
+                            if(puzzleform.value == "mural"){
+                                document.querySelector("main").innerHTML = "You decide to search the mural of edward and feel a gust of wind so you run your hand around its side and feel a handle. You pull with all your might and it opens up. You step through and enter the hallway where you and the agent were at but stepped out of a painting from this side." +
+                                "You can either go left or right from where you are at now what way do you go?"
+                                hallway();
+                            } else if (puzzleform.value == "table"){
+                                document.querySelector("main").innerHTML = "You decide to play a game of pool and pot all the balls possible before potting the eight ball. Once you pot the eight ball the mural of edward swings violently open. You step through and enter the hallway where you and the agent were at but stepped out of a painting from this side." +
+                                "You can either go left or right from where you are at now what way do you go?"
+                                hallway();
+                            }
+                            
+            })
+        }
+        function hallway() {
+            let hallwayform = document.createElement('INPUT');
+                        hallwayform.setAttribute("type", "text");
+                        first.appendChild(hallwayform)
+                        button = document.createElement("BUTTON");
+                        button.innerHTML = "notes";
+                        first.appendChild(button);
+                        button1 = document.createElement("button");
+                        button1.innerHTML = "Restart";
+                        first.appendChild(button1);
+                        button1.addEventListener('click', event => {
+                            document.location.reload()
+                        })
+                        let hallwaybutton = document.createElement('INPUT');
+                        hallwaybutton.setAttribute("type", "submit");
+                        first.appendChild(hallwaybutton);
+                        hallwaybutton.addEventListener('click', event => {
+                            if(hallwayform.value == "left"){
+                                document.querySelector("main").innerHTML = "You decide to go left and travel down the hallway but realize edward is on the other side of these doors patrolling the downstairs so you go the other way and follow the right path and end up in a set of staircases that only go down."
+                                + "You go down and enter a basement with red sludge that almost ressembles blood on the walls."
+                            } else if (hallwayform.value == "right"){
+                                document.querySelector("main").innerHTML = "You go right and end up in a set of staircases that only go down."
+                                + "You go down and enter a basement with red sludge that almost ressembles blood on the walls."
+                            }
+        })
+    }
+}
+                            
+
+                        
+                
+            
             </script>
     </div>
     <div class="notes">
