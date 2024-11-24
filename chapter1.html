@@ -20,42 +20,37 @@
                 const first = document.querySelector('#game');
                 const p = document.createElement('p');
                 document.querySelector('#game').textContent = '';
+                document.querySelector('main').innerHTML = "Please input your name again: "
+                first.appendChild(main);
+                let nameform = document.createElement('INPUT');
+                nameform.setAttribute("type", "text");
+                nameform.id = "frm1";
+                first.appendChild(nameform)
                 button = document.createElement("BUTTON");
-                button.innerHTML = "start chapter 1?";
+                button.innerHTML = "notes";
                 first.appendChild(button);
-                button.addEventListener('click', event => {
-                    document.querySelector('main').innerHTML = "Before we start this adventure please enter your name: "
-                    first.appendChild(main);
-                    let nameform = document.createElement('INPUT');
-                    nameform.setAttribute("type", "text");
-                    nameform.id = "frm1";
-                    first.appendChild(nameform)
-                    button = document.createElement("BUTTON");
-                    button.innerHTML = "notes";
-                    first.appendChild(button);
-                    button1 = document.createElement("button");
-                    button1.innerHTML = "Restart";
-                    first.appendChild(button1);
-                    button1.addEventListener('click', event => {
-                        document.location.reload()
-                    })
-                    let namebutton = document.createElement('INPUT');
-                    namebutton.setAttribute("type", "submit");
-                    first.appendChild(namebutton);
-                    namebutton.addEventListener('click', event => {
-                        newfun()
-                    })
-
-                    function newfun() {
-                        var x = document.getElementById("frm1");
-                        var text = "";
-                        var i;
-                        for (i = 0; i < x.length; i++) {
-                            text += x.elements[i].value + "<br>";
-                        }
-                        chapter1()
-                    }
+                button1 = document.createElement("button");
+                button1.innerHTML = "Restart";
+                first.appendChild(button1);
+                button1.addEventListener('click', event => {
+                    document.location.reload()
                 })
+                let namebutton = document.createElement('INPUT');
+                namebutton.setAttribute("type", "submit");
+                first.appendChild(namebutton);
+                namebutton.addEventListener('click', event => {
+                    newfun()
+                })
+
+                function newfun() {
+                    var x = document.getElementById("frm1");
+                    var text = "";
+                    var i;
+                    for (i = 0; i < x.length; i++) {
+                        text += x.elements[i].value + "<br>";
+                    }
+                    chapter1()
+                }
 
 
                 function chapter1() {
